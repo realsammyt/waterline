@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>WATERLINE | Foam on Mother</title>
+<meta name="description" content="Offline, illustrative WATERLINE concept simulator.">
+<link rel="icon" href="data:,"><style>
+:root{color-scheme:dark;--background:#14202a;--foreground:#e9f3f7;--muted:#294b5c;--muted-foreground:#a9c7d5;--secondary:#101924;--orange:#ffc087;--honey:#e2a944;--font-size-base:16px;background:#0d141b;color:var(--foreground);font:100%/1.6 system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0}main{max-width:890px;margin:0 auto;padding:clamp(1rem,4vw,2.6rem)}h1{line-height:1.15}a{color:#a6e6f3}a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #a6e6f3;outline-offset:3px}.viz-controls,.viz-row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}.viz-row{max-width:100%}.btn,.form-select,button,select{font:inherit;color:inherit;background:#223947;border:1px solid #819ba7;border-radius:.4rem;min-height:44px;padding:.32rem .65rem}button[aria-pressed="true"]{background:#c1e4ef;color:#112432;border:2px solid #fff}.form-range{min-height:32px;accent-color:#b6e6f3}.text-small,.note{font-size:.94rem;color:var(--muted-foreground)}svg{border-radius:.5rem;border:1px solid #456374}.card{padding:clamp(.55rem,2vw,1rem);background:var(--background);border:1px solid #456374;border-radius:.5rem}.jump{margin-bottom:.5rem}.tabular-nums{font-variant-numeric:tabular-nums}
+</style></head>
+<body><main><nav class="jump" aria-label="Studies"><a href="../index.html">WATERLINE studies</a></nav>
+<p class="note">v0.4 / Current</p><h1>Foam on Mother</h1><p>Nine fixed domes on one low disc. Calm water finishes the rim domes into bubbles; a wake takes them apart. Move the viewpoint, change the simulated water, and send one rise. Audio is optional and starts off.</p><div class="card">
+<div id="waterline-foam-04" data-light-mode="day">
+  <div class="viz-controls foam-controls">
+    <label class="form-label foam-angle">
+      <span>Viewpoint <output class="tabular-nums" data-angle>10°</output></span>
+      <input class="form-range" type="range" min="0" max="88" step="1" value="10" data-yaw>
+    </label>
+    <div class="viz-row" role="group" aria-label="Viewpoint presets">
+      <button type="button" class="btn" data-view="10" aria-pressed="true">Boardwalk</button>
+      <button type="button" class="btn" data-view="65" aria-pressed="false">Pier</button>
+      <button type="button" class="btn" data-above aria-pressed="false">From above</button>
+    </div>
+  </div>
+  <svg class="foam-model" role="img" aria-labelledby="foam-title-04 foam-desc-04" focusable="false">
+    <title id="foam-title-04">WATERLINE foam on mother in a virtual water plane</title>
+    <desc id="foam-desc-04">Nine fixed translucent domes of different sizes on one low amber disc, with broken virtual reflections below the waterline. Changing the viewpoint makes domes hide and reveal each other. From above, the domes read as circles packed on the disc and no reflection is visible. A simulated glow passes from the smallest dome to the largest, then goes dark.</desc>
+    <defs>
+      <linearGradient id="foam-water-04" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" class="foam-water-top"></stop><stop offset="100%" class="foam-water-bottom"></stop>
+      </linearGradient>
+      <clipPath id="foam-reflect-clip-04"><rect data-clip></rect></clipPath>
+    </defs>
+    <rect data-sky class="foam-sky"></rect>
+    <rect data-water class="foam-water"></rect>
+    <path data-lines class="foam-lines" aria-hidden="true"></path>
+    <path data-line class="foam-waterline" aria-hidden="true"></path>
+    <g data-reflections clip-path="url(#foam-reflect-clip-04)" aria-hidden="true"></g>
+    <path data-mother class="foam-mother" aria-hidden="true"></path>
+    <path data-layers class="foam-layers" aria-hidden="true"></path>
+    <g data-domes aria-hidden="true"></g>
+  </svg>
+  <div class="viz-controls foam-controls foam-actions">
+    <label class="form-label foam-weather">
+      <span>Simulated water</span>
+      <select class="form-select" data-weather>
+        <option value="calm">Calm water</option>
+        <option value="chop">Chop</option>
+        <option value="wake">Passing wake</option>
+      </select>
+    </label>
+    <div class="viz-row" role="group" aria-label="Lighting">
+      <button class="btn" type="button" data-light="day" aria-pressed="true">Day</button>
+      <button class="btn" type="button" data-light="night" aria-pressed="false">Night</button>
+      <button class="btn btn-primary" type="button" data-play>Send a rise</button>
+    </div>
+    <label class="form-check"><input class="form-check-input" type="checkbox" data-sound><span class="form-check-label">Sound (optional)</span></label>
+  </div>
+  <p class="text-small foam-status" aria-live="polite" aria-atomic="true" data-status>Day · Calm water. Offline study; no device connected.</p>
+</div>
+<style>
+#waterline-foam-04{--wf-sky:var(--background);--wf-water:var(--muted);--wf-silver:var(--muted-foreground);display:grid;gap:calc(var(--font-size-base, 14px)*.7);min-width:0}
+#waterline-foam-04[data-light-mode="night"]{--wf-sky:var(--secondary)}
+#waterline-foam-04 .foam-controls{row-gap:calc(var(--font-size-base, 14px)*.4);column-gap:calc(var(--font-size-base, 14px)*.9);align-items:end}
+#waterline-foam-04 .foam-angle{flex:1 1 11rem;min-width:0}
+#waterline-foam-04 .foam-angle span{display:flex;justify-content:space-between;gap:.5em}
+#waterline-foam-04 .foam-angle input{width:100%}
+#waterline-foam-04 .foam-weather{display:grid;gap:calc(var(--font-size-base, 14px)*.25);min-width:0}
+#waterline-foam-04 .foam-model{display:block;width:100%}
+#waterline-foam-04 .foam-sky{fill:var(--wf-sky)}
+#waterline-foam-04 .foam-water{fill:url(#foam-water-04)}
+#waterline-foam-04 .foam-water-top{stop-color:var(--wf-water);stop-opacity:.95}
+#waterline-foam-04 .foam-water-bottom{stop-color:var(--wf-water);stop-opacity:.16}
+#waterline-foam-04 .foam-lines{fill:none;stroke:var(--wf-silver);stroke-opacity:.19;stroke-width:1}
+#waterline-foam-04 .foam-waterline{fill:none;stroke:var(--wf-silver);stroke-opacity:.54;stroke-width:1}
+#waterline-foam-04 .foam-mother{fill:var(--honey);fill-opacity:.42;stroke:var(--honey);stroke-width:1.2}
+#waterline-foam-04 .foam-layers{fill:none;stroke:var(--honey);stroke-opacity:.55;stroke-width:1}
+#waterline-foam-04 .foam-dome{fill:var(--honey);stroke:var(--foreground);stroke-linejoin:round;transition:fill .29s ease,fill-opacity .29s ease}
+#waterline-foam-04 .foam-reflect{fill:var(--honey);stroke:var(--wf-silver);stroke-dasharray:8 4 4 6;transition:fill .29s ease,fill-opacity .29s ease}
+#waterline-foam-04 .foam-lit{fill:var(--orange)}
+#waterline-foam-04 .foam-status{margin:0;min-height:2.4em}
+@media(prefers-reduced-motion:reduce){#waterline-foam-04 .foam-dome,#waterline-foam-04 .foam-reflect{transition:none}}
+</style>
+<script>
+(()=>{
+  const root=document.getElementById('waterline-foam-04');
+  const pick=(s)=>root.querySelector(s);
+  const svg=pick('.foam-model'), yaw=pick('[data-yaw]'), angle=pick('[data-angle]'), weather=pick('[data-weather]'), play=pick('[data-play]'), sound=pick('[data-sound]'), status=pick('[data-status]'), aboveBtn=pick('[data-above]');
+  const views=[...root.querySelectorAll('[data-view]')], lights=[...root.querySelectorAll('[data-light]')];
+  const ns='http://www.w3.org/2000/svg';
+  // Illustrative optical-study geometry in metres: disc radius, freeboard, and domes largest first.
+  const DISC=4.5, FREEBOARD=.15;
+  const model=[
+    {d:4.0,x:-1.6,z:.6},
+    {d:3.2,x:1.7,z:-.5},
+    {d:2.6,x:.6,z:3.0},
+    {d:2.2,x:-.6,z:-2.2},
+    {d:1.8,x:3.2,z:1.6},
+    {d:1.5,x:2.0,z:-2.9},
+    {d:1.2,x:-3.0,z:-1.6},
+    {d:1.0,x:-1.8,z:3.0},
+    {d:.8,x:1.9,z:1.5}
+  ];
+  const order=model.map((_,i)=>i).reverse(); // smallest to largest
+  const presets={
+    calm:{label:'Calm water',amp:.55,freq:.40,step:520,dash:'11 4 6 5'},
+    chop:{label:'Chop',amp:2.6,freq:.39,step:440,dash:'7 5 4 6'},
+    wake:{label:'Passing wake',amp:4.6,freq:.25,step:620,dash:'4 7 8 6'}
+  };
+  let mode='day', above=false, active=-1, running=false, timer=0, phase=0;
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+  const Audio=window.AudioContext||window.webkitAudioContext;
+  let audio=null, voices=[];
+  if(!Audio){sound.disabled=true;sound.closest('label').hidden=true;}
+  function enableAudio(){
+    if(!Audio||!sound.checked)return;
+    try{audio ||= new Audio(); audio.resume().catch(()=>{});}catch(_){}
+  }
+  function muteAudio(){
+    voices.forEach(voice=>{try{voice.stop();}catch(_){}});
+    voices=[];
+  }
+  function tone(dome,delay=0){
+    if(!audio||!sound.checked)return;
+    try{
+      const at=audio.currentTime+delay, o=audio.createOscillator(), g=audio.createGain();
+      o.type='sine';o.frequency.value=[523.25,466.16,392,349.23,293.66,261.63,220,196,174.61][dome];
+      g.gain.setValueAtTime(0,at);
+      g.gain.linearRampToValueAtTime(.027,at+.035);
+      g.gain.exponentialRampToValueAtTime(.0001,at+.23);
+      o.connect(g);g.connect(audio.destination);voices.push(o);
+      o.onended=()=>{voices=voices.filter(v=>v!==o);o.disconnect();g.disconnect();};
+      o.start(at);o.stop(at+.24);
+    }catch(_){}
+  }
+  function el(cls){const e=document.createElementNS(ns,'path');e.setAttribute('class',cls);return e;}
+  const rec=model.map(()=>{
+    const refl=el('foam-reflect'), body=el('foam-dome');
+    pick('[data-reflections]').append(refl);
+    return {refl,body};
+  });
+  const rect=(el,x,y,w,h)=>{for(const [k,v] of Object.entries({x,y,width:w,height:h}))el.setAttribute(k,v);};
+  const path=(points)=>points.map((pt,i)=>(i?'L':'M')+pt.map(n=>n.toFixed(2)).join(' ')).join(' ');
+  const ring=(cx,cy,r)=>'M'+(cx-r).toFixed(2)+' '+cy.toFixed(2)+' a'+r.toFixed(2)+' '+r.toFixed(2)+' 0 1 0 '+(2*r).toFixed(2)+' 0 a'+r.toFixed(2)+' '+r.toFixed(2)+' 0 1 0 '+(-2*r).toFixed(2)+' 0 Z';
+  function setStatus(s){if(status.textContent!==s)status.textContent=s;}
+  function draw(){
+    const width=Math.max(1,Math.round(svg.getBoundingClientRect().width));
+    const height=Math.max(220,Math.min(320,Math.round(width*.49))), level=above?0:height*.49;
+    svg.setAttribute('viewBox','0 0 '+width+' '+height);
+    svg.style.height=height+'px';
+    const a=Number(yaw.value), rad=a*Math.PI/180, ca=Math.cos(rad), sa=Math.sin(rad);
+    const p=presets[weather.value]||presets.calm, night=mode==='night';
+    rect(pick('[data-sky]'),0,0,width,level);
+    rect(pick('[data-water]'),0,level,width,height-level);
+    rect(pick('[data-clip]'),0,level,width,height-level);
+    pick('[data-line]').setAttribute('d',above?'':'M0 '+level+' H'+width);
+    const traces=[];
+    for(let n=0;n<(above?40:15);n++){
+      const yy=level+7+n*7.5, xx=(n*97+16)%width, len=Math.min(width-xx-3,20+((n*43)%Math.max(25,width*.27)));
+      if(yy<height-5&&len>2)traces.push('M'+xx+' '+yy+' Q'+(xx+len*.49)+' '+(yy-p.amp)+' '+(xx+len)+' '+yy);
+    }
+    pick('[data-lines]').setAttribute('d',traces.join(' '));
+    const lit=(i)=>night&&i===active;
+    const style=(q,i)=>{
+      q.body.classList.toggle('foam-lit',lit(i));q.refl.classList.toggle('foam-lit',lit(i));
+      q.body.style.fillOpacity=lit(i)?.86:night?.13:.34;
+      q.body.style.strokeOpacity=night?.42:.8;
+      q.refl.style.fillOpacity=lit(i)?.4:night?.05:.14;
+      q.refl.style.strokeOpacity=night?.22:.36;
+      q.refl.style.strokeDasharray=p.dash;
+    };
+    if(above){
+      const s=Math.min(width,height)*.5/(DISC+.6), cx=width*.5, cy=height*.5;
+      pick('[data-mother]').setAttribute('d',ring(cx,cy,DISC*s));
+      pick('[data-layers]').setAttribute('d',ring(cx,cy,DISC*s*.86)+' '+ring(cx,cy,DISC*s*.7));
+      model.forEach((m,i)=>{
+        const q=rec[i];style(q,i);
+        q.refl.setAttribute('d','');
+        q.body.setAttribute('d',ring(cx+s*(m.x*ca-m.z*sa),cy+s*(m.x*sa+m.z*ca),s*m.d/2));
+        q.body.style.strokeWidth=1.4;
+        pick('[data-domes]').append(q.body);
+      });
+    }else{
+      const scale=Math.min(width*.085,height*.19);
+      const project=(x,y,z)=>{
+        const depth=x*sa+z*ca, cross=x*ca-z*sa, lens=18/(18-depth);
+        return [width*.5+scale*cross*lens,level+scale*(-y+.073*depth)*lens,lens,depth];
+      };
+      const edge=(r)=>{const pts=[];for(let j=0;j<48;j++){const t=2*Math.PI*j/48;pts.push(project(r*Math.cos(t),FREEBOARD,r*Math.sin(t)).slice(0,2));}return path(pts)+' Z';};
+      pick('[data-mother]').setAttribute('d',edge(DISC));
+      pick('[data-layers]').setAttribute('d',edge(DISC*.86)+' '+edge(DISC*.7));
+      const size=Math.max(1.2,Math.min(2.4,width*.004));
+      const back=model.map((_,i)=>i).sort((i,j)=>project(model[i].x,0,model[i].z)[3]-project(model[j].x,0,model[j].z)[3]);
+      for(const i of back){
+        const m=model[i], q=rec[i], top=project(m.x,FREEBOARD,m.z), low=project(m.x,-FREEBOARD,m.z), r=scale*m.d/2*top[2];
+        const dome=[], refl=[];
+        for(let j=0;j<=44;j++){
+          const t=Math.PI*j/44, dx=-r*Math.cos(t), dy=r*Math.sin(t);
+          dome.push([top[0]+dx,top[1]-dy]);
+          const rx=low[0]+dx, ry=low[1]+dy;
+          refl.push([rx+Math.sin(ry*p.freq+rx*.019)*p.amp*Math.min(1,dy/r*1.8),ry]);
+        }
+        style(q,i);
+        q.body.setAttribute('d',path(dome)+' Z');q.body.style.strokeWidth=size;
+        q.refl.setAttribute('d',path(refl)+' Z');q.refl.style.strokeWidth=size*.7;
+        pick('[data-domes]').append(q.body);
+      }
+    }
+    root.dataset.lightMode=mode;
+    angle.textContent=a+'°';
+    yaw.setAttribute('aria-valuetext',a+' degrees from front'+(above?', seen from above':''));
+    views.forEach(b=>b.setAttribute('aria-pressed',String(!above&&Number(b.dataset.view)===a)));
+    aboveBtn.setAttribute('aria-pressed',String(above));
+    lights.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.light===mode)));
+    play.textContent=running?'Stop rise':'Send a rise';
+  }
+  function idle(suffix=''){
+    running=false;active=-1;phase=0;clearTimeout(timer);muteAudio();
+    const view=above?' From above: no reflection is visible, so the nine domes have to read as a cluster in plan.':'';
+    setStatus((mode==='day'?'Day':'Night')+' · '+(presets[weather.value]||presets.calm).label+'. '+(suffix||'Offline study; no device connected.')+view);
+    draw();
+  }
+  function start(){
+    mode='night';running=true;phase=0;enableAudio();
+    const p=presets[weather.value]||presets.calm;
+    if(reduced.matches){
+      idle('Rise order: smallest dome to largest, one at a time, then dark. Reduced motion preview.');
+      if(sound.checked){enableAudio();order.forEach((dome,i)=>tone(dome,.02+i*p.step/1000));}
+      return;
+    }
+    setStatus('Night · '+p.label+'. Rise: one low glow passes from the smallest dome to the largest, then goes dark.');
+    const tick=()=>{
+      if(!running)return;
+      if(phase>=order.length){idle('Rise complete. Nothing stays lit.');return;}
+      active=order[phase++];tone(active);
+      draw();
+      timer=setTimeout(tick,p.step);
+    };
+    tick();
+  }
+  sound.addEventListener('change',()=>{if(!sound.checked)muteAudio();});
+  weather.addEventListener('change',()=>idle());
+  yaw.addEventListener('input',draw);
+  views.forEach(b=>b.addEventListener('click',()=>{above=false;yaw.value=b.dataset.view;idle();}));
+  aboveBtn.addEventListener('click',()=>{above=!above;idle();});
+  lights.forEach(b=>b.addEventListener('click',()=>{mode=b.dataset.light;idle();}));
+  play.addEventListener('click',()=>{if(running)idle('Rise stopped.');else start();});
+  new ResizeObserver(draw).observe(svg);
+  idle();
+})();
+</script>
+</div><p class="note">Illustrative only. Dome sizes and positions are optical-study values, not engineering. No site or weather connection, device access, telemetry, or control of physical equipment.</p><noscript>This study needs JavaScript. See the diagram links on the WATERLINE studies page.</noscript></main></body></html>

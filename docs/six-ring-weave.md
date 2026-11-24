@@ -1,5 +1,7 @@
 # Six Ring Weave · v0.3
 
+**Archived.** Superseded by [Foam on Mother, v0.4](honey-foam.md). Kept as the record of the six-rib study; its gates and dimensions do not carry over.
+
 **Six rings. No single lead.** Three loosely paired sets of slender upper ribs sit at staggered depths on a single illustrative chassis. Reflections supply the lower arcs; no lower physical ring exists. Viewpoint makes edges appear to meet. Nothing interlocks or moves mechanically.
 
 From the boardwalk, look for a gathered gesture without losing the six voices. From the pier, see distinct layers cross in perspective. From the side, make the spacing feel intentional. Wakes can break the reflections without breaking the artwork: the upper forms must read on their own.

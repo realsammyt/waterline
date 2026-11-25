@@ -4,8 +4,8 @@
 > what's next. Any agent starting fresh reads this first, then updates it before
 > ending. If anything here disagrees with reality, reality wins: fix the doc.
 
-**Last updated:** 2026-11-25 by Claude (model, renders, docs brought to the woven ring form)
-**Active branch:** `main` (work arrives by pull request; do not push to `main` directly)
+**Last updated:** 2026-11-25 by Claude (low flat float, revision 4)
+**Active branch:** `main` (work arrives by pull request; do not push to `main` directly). The low flat float work may still be uncommitted in the working tree: run `git status` first.
 **Driving refs:** [AGENTS.md](AGENTS.md) (repo rules, binding), [docs/rings-on-mother.md](docs/rings-on-mother.md) (the design), [models/gen_rim.py](models/gen_rim.py) (geometry and first-pass checks)
 
 ---
@@ -24,8 +24,8 @@
 | Thing | Value | How to check |
 | ----- | ----- | ------------ |
 | Static check | passes | `python -I tests/check_public.py` |
-| Float and structure check | about 851 kg, buoyancy 2.4 times weight, tubes 189 mm apart counting strips | `python -I models/gen_rim.py out.json` (asserts stop it if a margin is lost) |
-| Model bodies | all closed solids | `solidcraft-cli eval --in models/waterline-rim-weave-r3.sc` |
+| Float and structure check | about 812 kg, buoyancy 2.1 times weight, float top 73 mm above water, tubes 189 mm apart counting strips | `python -I models/gen_rim.py out.json` (asserts stop it if a margin is lost) |
+| Model bodies | all closed solids | `solidcraft-cli eval --in models/waterline-rim-weave-r4.sc` |
 | Simulator | no console errors, sound off at start | open `simulators/weave.html`, follow `tests/manual.md` step 2 |
 
 ---
@@ -44,7 +44,7 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 
 | # | Item | Status | Updated | Note |
 | - | ---- | ------ | ------- | ---- |
-| 1 | Form: six ribs footed on the ring, woven, no mesh | Done | 2026-11-25 | `models/gen_rim.py`, revision 3 |
+| 1 | Form: six ribs footed on the ring, woven, no mesh | Done | 2026-11-25 | `models/gen_rim.py`, revision 4 |
 | 2 | First-pass float, wind, wave, rib, power checks | Done | 2026-11-25 | Planning arithmetic only. No engineer has seen it. |
 | 3 | Design note, diagram, simulator in the new form | Done | 2026-11-25 | Simulator has an Above view, six tones, travelling bands |
 | 4 | Light: two strips per rib, top and underside | Done | 2026-11-25 | Modelled and written into the note. Not priced. |
@@ -63,8 +63,9 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 3. Six tones in a dusk range (pale gold, orange, terracotta, rose, magenta, violet). No red, green, white, yellow or blue. 2026-11-25.
 4. A held value shows as a short band that travels foot to foot through the hour. 2026-11-25.
 5. Light strips run the full length of each rib, one on top and one on the underside. No block at the crown. 2026-11-25.
-6. Float and the ring on it are water grey. Ribs are the only honey-toned part. 2026-11-25.
+6. The float is water grey. Ribs are the only honey-toned part. 2026-11-25.
 7. One navigation light post, on the side away from the shore. The shore-side post was removed. 2026-11-25.
+9. The float is low and flat: about 0.6 m wide, 0.14 m thick, top about 7 cm above the water, foam in a grey skin round an aluminium frame. A float fully under water was studied and rejected (it capsizes in the storm case and cannot follow the lake level). 2026-11-25.
 8. No camera, no powered shore unit. Public choice is one way, via a code on a sign, and stays a local simulation in this repo. 2026-11-24.
 
 ---
@@ -72,8 +73,8 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 ## 5. Open questions owned by the artist (get answers before acting)
 
 1. Does one navigation light satisfy the harbour authority? The call requires navigation lights. Blocks the final model.
-2. Can the float pipe be supplied with a grey outer skin, or does it need a sleeve? Blocks the finish description.
-3. Anchor type. A storm gust pushes about 8.5 kN sideways and the lakebed type is unknown. Blocks the mooring design.
+2. Can a dock or float builder make the low foam float as drawn, and is its 0.6 m top acceptable under the call's climbability rule? Blocks the float design.
+3. Anchor type. A storm gust pushes about 7 kN sideways and the lakebed type is unknown. Blocks the mooring design.
 4. Which stretch of shore the eye faces. Blocks final in-situ views.
 5. Does the second row of light strip fit the budget? It is unpriced.
 
@@ -82,8 +83,8 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 ## 6. Key facts a fresh agent will want
 
 - **Geometry has one source.** `models/gen_rim.py` holds every size. It writes a SolidCraft script; the simulator (`simulators/weave.html`) repeats the same six ribs by hand, so change both together.
-- **Rebuild the model:** `python -I models/gen_rim.py models/waterline-rim-weave-r3.script.json`, then `solidcraft-cli run <script> --save <name>.sc --out <name>.step --out <name>.glb`. Add the word `mooring` to the first command for the version with anchors.
-- **Render:** `blender -b -P models/render_closeup.py -- models/waterline-rim-weave-r3.glb models/renders`. Blender 5.x, Cycles. Body names in the GLB drive materials: `Rib ...`, `Light strip top ...`, `Light strip under ...`, `Float ring`, `Aluminium ring`.
+- **Rebuild the model:** `python -I models/gen_rim.py models/waterline-rim-weave-r4.script.json`, then `solidcraft-cli run <script> --save <name>.sc --out <name>.step --out <name>.glb`. Add the word `mooring` to the first command for the version with anchors.
+- **Render:** `blender -b -P models/render_closeup.py -- models/waterline-rim-weave-r4.glb models/renders`. Blender 5.x, Cycles. Body names in the GLB drive materials: `Rib ...`, `Light strip top ...`, `Light strip under ...`, `Float`, `Frame ring inner`, `Frame ring outer`. The two frame rings sit inside the float body and overlap it on purpose.
 - **The GLB is in metres, Y up.** Water is at height zero. The shore view looks along +Y from the -Y side.
 - **The night renders light every strip end to end** to show placement. The work itself lights one to three short bands. Say so on any image.
 - **Tones wash toward white** when emission is strong. Keep emission low to hold the colour.
@@ -95,6 +96,7 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 
 ## 7. Activity log (newest first; append, don't overwrite)
 
+- **2026-11-25** Replaced the 355 mm pipe float with a low flat float (revision 4) after a first-pass study of submerged options. Model, renders, note, diagram and simulator updated.
 - **2026-11-25** Reworked the form in a solid model: ribs footed on the ring, woven, mesh removed. Added first-pass checks, feet, strips, power and mooring to the model. Brought the note, diagram and simulator to the new form. Added six tones, travelling bands, a second row of strips, grey ring; removed the shore-side navigation post. First close-up renders.
 
 ---

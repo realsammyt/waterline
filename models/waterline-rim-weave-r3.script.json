@@ -1,0 +1,1526 @@
+{
+ "commands": [
+  {
+   "command": "solid.torus",
+   "params": {
+    "major": 3350,
+    "minor": 177.5,
+    "center": [
+     0,
+     0,
+     25.61032355621609
+    ],
+    "body_name": "Float ring"
+   }
+  },
+  {
+   "command": "solid.torus",
+   "params": {
+    "major": 3350,
+    "minor": 57.15,
+    "center": [
+     0,
+     0,
+     260.26032355621606
+    ],
+    "body_name": "Aluminium ring"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 405,
+    "height": 60,
+    "base": [
+     2390.02,
+     2347.59,
+     25.61
+    ],
+    "axis": [
+     -0.70711,
+     0.70711,
+     0
+    ],
+    "body_name": "Float joint 1"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 405,
+    "height": 60,
+    "base": [
+     -2347.59,
+     2390.02,
+     25.61
+    ],
+    "axis": [
+     -0.70711,
+     -0.70711,
+     0
+    ],
+    "body_name": "Float joint 2"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 405,
+    "height": 60,
+    "base": [
+     -2390.02,
+     -2347.59,
+     25.61
+    ],
+    "axis": [
+     0.70711,
+     -0.70711,
+     0
+    ],
+    "body_name": "Float joint 3"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 405,
+    "height": 60,
+    "base": [
+     2347.59,
+     -2390.02,
+     25.61
+    ],
+    "axis": [
+     0.70711,
+     0.70711,
+     0
+    ],
+    "body_name": "Float joint 4"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 3 Water path",
+    "plane": {
+     "origin": [
+      -0.0,
+      0.0,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      -0.07338689100003824,
+      0.15737869562426265,
+      0.984807753012208
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3350.0,
+     0
+    ],
+    "end": [
+     -3350.0,
+     0
+    ],
+    "through": [
+     0,
+     1850
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 3 Water path",
+    "path": [
+     "a1"
+    ],
+    "diameter": 152.4,
+    "body_name": "Rib 3 Water"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 3 Water path light top",
+    "plane": {
+     "origin": [
+      -0.0,
+      0.0,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      -0.07338689100003824,
+      0.15737869562426265,
+      0.984807753012208
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3231.901,
+     298.162
+    ],
+    "end": [
+     -3231.901,
+     298.162
+    ],
+    "through": [
+     0,
+     1921.2
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 3 Water path light top",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip top 3 Water"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 3 Water path light under",
+    "plane": {
+     "origin": [
+      -0.0,
+      0.0,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      -0.07338689100003824,
+      0.15737869562426265,
+      0.984807753012208
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3117.682,
+     213.122
+    ],
+    "end": [
+     -3117.682,
+     213.122
+    ],
+    "through": [
+     0,
+     1778.8
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 3 Water path light under",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip under 3 Water"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     3036.13,
+     1415.77,
+     260.26
+    ],
+    "axis": [
+     -0.54482,
+     -0.09189,
+     0.83351
+    ],
+    "body_name": "Rib 3 Water socket A"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     -3036.13,
+     -1415.77,
+     260.26
+    ],
+    "axis": [
+     0.42059,
+     0.35829,
+     0.83351
+    ],
+    "body_name": "Rib 3 Water socket B"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 4 Time path",
+    "plane": {
+     "origin": [
+      380.3564355666295,
+      -815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      -0.07338689100003824,
+      0.15737869562426265,
+      0.984807753012208
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3226.841,
+     0
+    ],
+    "end": [
+     -3226.841,
+     0
+    ],
+    "through": [
+     0,
+     1700
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 4 Time path",
+    "path": [
+     "a1"
+    ],
+    "diameter": 152.4,
+    "body_name": "Rib 4 Time"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 4 Time path light top",
+    "plane": {
+     "origin": [
+      380.3564355666295,
+      -815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      -0.07338689100003824,
+      0.15737869562426265,
+      0.984807753012208
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3096.948,
+     293.249
+    ],
+    "end": [
+     -3096.948,
+     293.249
+    ],
+    "through": [
+     0,
+     1771.2
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 4 Time path light top",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip top 4 Time"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 4 Time path light under",
+    "plane": {
+     "origin": [
+      380.3564355666295,
+      -815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      -0.07338689100003824,
+      0.15737869562426265,
+      0.984807753012208
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     2986.246,
+     203.679
+    ],
+    "end": [
+     -2986.246,
+     203.679
+    ],
+    "through": [
+     0,
+     1628.8
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 4 Time path light under",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip under 4 Time"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     3304.87,
+     548.04,
+     260.26
+    ],
+    "axis": [
+     -0.57304,
+     -0.10919,
+     0.81222
+    ],
+    "body_name": "Rib 4 Time socket A"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     -2544.15,
+     -2179.4,
+     260.26
+    ],
+    "axis": [
+     0.45199,
+     0.36879,
+     0.81222
+    ],
+    "body_name": "Rib 4 Time socket B"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 2 Leaf path",
+    "plane": {
+     "origin": [
+      -380.3564355666295,
+      815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      -0.07338689100003824,
+      0.15737869562426265,
+      0.984807753012208
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3226.841,
+     0
+    ],
+    "end": [
+     -3226.841,
+     0
+    ],
+    "through": [
+     0,
+     1550
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 2 Leaf path",
+    "path": [
+     "a1"
+    ],
+    "diameter": 152.4,
+    "body_name": "Rib 2 Leaf"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 2 Leaf path light top",
+    "plane": {
+     "origin": [
+      -380.3564355666295,
+      815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      -0.07338689100003824,
+      0.15737869562426265,
+      0.984807753012208
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3076.275,
+     283.035
+    ],
+    "end": [
+     -3076.275,
+     283.035
+    ],
+    "through": [
+     0,
+     1621.2
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 2 Leaf path light top",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip top 2 Leaf"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 2 Leaf path light under",
+    "plane": {
+     "origin": [
+      -380.3564355666295,
+      815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      -0.07338689100003824,
+      0.15737869562426265,
+      0.984807753012208
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     2972.101,
+     185.951
+    ],
+    "end": [
+     -2972.101,
+     185.951
+    ],
+    "through": [
+     0,
+     1478.8
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 2 Leaf path light under",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip under 2 Leaf"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     2544.15,
+     2179.4,
+     260.26
+    ],
+    "axis": [
+     -0.62377,
+     -0.14131,
+     0.76873
+    ],
+    "body_name": "Rib 2 Leaf socket A"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     -3304.87,
+     -548.04,
+     260.26
+    ],
+    "axis": [
+     0.5092,
+     0.387,
+     0.76873
+    ],
+    "body_name": "Rib 2 Leaf socket B"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 5 Air path",
+    "plane": {
+     "origin": [
+      0.0,
+      0.0,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      -0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      0.17860619515673035,
+      0.383022221559489,
+      0.9063077870366499
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3350.0,
+     0
+    ],
+    "end": [
+     -3350.0,
+     0
+    ],
+    "through": [
+     0,
+     1300
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 5 Air path",
+    "path": [
+     "a1"
+    ],
+    "diameter": 152.4,
+    "body_name": "Rib 5 Air"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 5 Air path light top",
+    "plane": {
+     "origin": [
+      0.0,
+      0.0,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      -0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      0.17860619515673035,
+      0.383022221559489,
+      0.9063077870366499
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3159.426,
+     257.288
+    ],
+    "end": [
+     -3159.426,
+     257.288
+    ],
+    "through": [
+     0,
+     1371.2
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 5 Air path light top",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip top 5 Air"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 5 Air path light under",
+    "plane": {
+     "origin": [
+      0.0,
+      0.0,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      -0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      0.17860619515673035,
+      0.383022221559489,
+      0.9063077870366499
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3070.116,
+     146.375
+    ],
+    "end": [
+     -3070.116,
+     146.375
+    ],
+    "through": [
+     0,
+     1228.8
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 5 Air path light under",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip under 5 Air"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     3036.13,
+     -1415.77,
+     260.26
+    ],
+    "axis": [
+     -0.54859,
+     0.57036,
+     0.61134
+    ],
+    "body_name": "Rib 5 Air socket A"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     -3036.13,
+     1415.77,
+     260.26
+    ],
+    "axis": [
+     0.78955,
+     -0.05363,
+     0.61134
+    ],
+    "body_name": "Rib 5 Air socket B"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 1 Warmth path",
+    "plane": {
+     "origin": [
+      -380.3564355666295,
+      -815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      -0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      0.17860619515673035,
+      0.383022221559489,
+      0.9063077870366499
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3226.841,
+     0
+    ],
+    "end": [
+     -3226.841,
+     0
+    ],
+    "through": [
+     0,
+     1150
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 1 Warmth path",
+    "path": [
+     "a1"
+    ],
+    "diameter": 152.4,
+    "body_name": "Rib 1 Warmth"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 1 Warmth path light top",
+    "plane": {
+     "origin": [
+      -380.3564355666295,
+      -815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      -0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      0.17860619515673035,
+      0.383022221559489,
+      0.9063077870366499
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3022.504,
+     246.429
+    ],
+    "end": [
+     -3022.504,
+     246.429
+    ],
+    "through": [
+     0,
+     1221.2
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 1 Warmth path light top",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip top 1 Warmth"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 1 Warmth path light under",
+    "plane": {
+     "origin": [
+      -380.3564355666295,
+      -815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      -0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      0.17860619515673035,
+      0.383022221559489,
+      0.9063077870366499
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     2939.308,
+     130.86
+    ],
+    "end": [
+     -2939.308,
+     130.86
+    ],
+    "through": [
+     0,
+     1078.8
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 1 Warmth path light under",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip under 1 Warmth"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     2544.15,
+     -2179.4,
+     260.26
+    ],
+    "axis": [
+     -0.58907,
+     0.5696,
+     0.57319
+    ],
+    "body_name": "Rib 1 Warmth socket A"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     -3304.87,
+     548.04,
+     260.26
+    ],
+    "axis": [
+     0.81499,
+     -0.08512,
+     0.57319
+    ],
+    "body_name": "Rib 1 Warmth socket B"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 6 Sweetness path",
+    "plane": {
+     "origin": [
+      380.3564355666295,
+      815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      -0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      0.17860619515673035,
+      0.383022221559489,
+      0.9063077870366499
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3226.841,
+     0
+    ],
+    "end": [
+     -3226.841,
+     0
+    ],
+    "through": [
+     0,
+     1000
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 6 Sweetness path",
+    "path": [
+     "a1"
+    ],
+    "diameter": 152.4,
+    "body_name": "Rib 6 Sweetness"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 6 Sweetness path light top",
+    "plane": {
+     "origin": [
+      380.3564355666295,
+      815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      -0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      0.17860619515673035,
+      0.383022221559489,
+      0.9063077870366499
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     3003.547,
+     229.095
+    ],
+    "end": [
+     -3003.547,
+     229.095
+    ],
+    "through": [
+     0,
+     1071.2
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 6 Sweetness path light top",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip top 6 Sweetness"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 6 Sweetness path light under",
+    "plane": {
+     "origin": [
+      380.3564355666295,
+      815.677008332985,
+      260.26032355621606
+     ],
+     "x_dir": [
+      0.9063077870366499,
+      -0.42261826174069944,
+      0
+     ],
+     "y_dir": [
+      0.17860619515673035,
+      0.383022221559489,
+      0.9063077870366499
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.arc.three_point",
+   "params": {
+    "start": [
+     2929.517,
+     107.451
+    ],
+    "end": [
+     -2929.517,
+     107.451
+    ],
+    "through": [
+     0,
+     928.8
+    ]
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 6 Sweetness path light under",
+    "path": [
+     "a1"
+    ],
+    "diameter": 30,
+    "body_name": "Light strip under 6 Sweetness"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     3304.87,
+     -548.04,
+     260.26
+    ],
+    "axis": [
+     -0.64648,
+     0.56515,
+     0.51251
+    ],
+    "body_name": "Rib 6 Sweetness socket A"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 172,
+    "height": 300,
+    "base": [
+     -2544.15,
+     2179.4,
+     260.26
+    ],
+    "axis": [
+     0.84848,
+     -0.13196,
+     0.51251
+    ],
+    "body_name": "Rib 6 Sweetness socket B"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "corner": [
+     -250,
+     3200,
+     327.41032355621604
+    ],
+    "length": 500,
+    "width": 300,
+    "height": 25,
+    "body_name": "Solar panel 1"
+   }
+  },
+  {
+   "command": "solid.move",
+   "params": {
+    "bodies": [
+     "Solar panel 1"
+    ],
+    "angle": "-31 deg",
+    "origin": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "corner": [
+     -250,
+     3200,
+     327.41032355621604
+    ],
+    "length": 500,
+    "width": 300,
+    "height": 25,
+    "body_name": "Solar panel 2"
+   }
+  },
+  {
+   "command": "solid.move",
+   "params": {
+    "bodies": [
+     "Solar panel 2"
+    ],
+    "angle": "-21 deg",
+    "origin": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "corner": [
+     -250,
+     3200,
+     327.41032355621604
+    ],
+    "length": 500,
+    "width": 300,
+    "height": 25,
+    "body_name": "Solar panel 3"
+   }
+  },
+  {
+   "command": "solid.move",
+   "params": {
+    "bodies": [
+     "Solar panel 3"
+    ],
+    "angle": "-11 deg",
+    "origin": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "corner": [
+     -250,
+     3200,
+     327.41032355621604
+    ],
+    "length": 500,
+    "width": 300,
+    "height": 25,
+    "body_name": "Solar panel 4"
+   }
+  },
+  {
+   "command": "solid.move",
+   "params": {
+    "bodies": [
+     "Solar panel 4"
+    ],
+    "angle": "11 deg",
+    "origin": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "corner": [
+     -250,
+     3200,
+     327.41032355621604
+    ],
+    "length": 500,
+    "width": 300,
+    "height": 25,
+    "body_name": "Solar panel 5"
+   }
+  },
+  {
+   "command": "solid.move",
+   "params": {
+    "bodies": [
+     "Solar panel 5"
+    ],
+    "angle": "21 deg",
+    "origin": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "corner": [
+     -250,
+     3200,
+     327.41032355621604
+    ],
+    "length": 500,
+    "width": 300,
+    "height": 25,
+    "body_name": "Solar panel 6"
+   }
+  },
+  {
+   "command": "solid.move",
+   "params": {
+    "bodies": [
+     "Solar panel 6"
+    ],
+    "angle": "31 deg",
+    "origin": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "corner": [
+     -150,
+     3250,
+     317.41032355621604
+    ],
+    "length": 300,
+    "width": 200,
+    "height": 150,
+    "body_name": "Battery and control box"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 48,
+    "height": 900,
+    "base": [
+     0.0,
+     3510.0,
+     317.41
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "body_name": "Navigation light post 1"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 130,
+    "height": 130,
+    "base": [
+     0.0,
+     3510.0,
+     1217.41
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "body_name": "Navigation light 1"
+   }
+  }
+ ]
+}

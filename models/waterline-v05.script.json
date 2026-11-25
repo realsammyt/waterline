@@ -1,0 +1,460 @@
+{
+ "commands": [
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "disc_d",
+    "expression": "7000",
+    "unit": "mm",
+    "comment": "mother disc, outside of rim"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rim_d",
+    "expression": "300",
+    "unit": "mm",
+    "comment": "rim pipe, centre on the waterline, so the top is 150 above water"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "tube_d",
+    "expression": "150",
+    "unit": "mm",
+    "comment": "rib tube"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rib_base",
+    "expression": "150",
+    "unit": "mm",
+    "comment": "height of the rib ends above water"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "spacing",
+    "expression": "440",
+    "unit": "mm",
+    "comment": "gap between rib planes"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "span1",
+    "expression": "5140",
+    "unit": "mm",
+    "comment": "rib 1 Warmth"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rise1",
+    "expression": "1420",
+    "unit": "mm",
+    "comment": "rib 1 Warmth"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "span2",
+    "expression": "5440",
+    "unit": "mm",
+    "comment": "rib 2 Leaf"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rise2",
+    "expression": "1640",
+    "unit": "mm",
+    "comment": "rib 2 Leaf"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "span3",
+    "expression": "6000",
+    "unit": "mm",
+    "comment": "rib 3 Water"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rise3",
+    "expression": "2000",
+    "unit": "mm",
+    "comment": "rib 3 Water"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "span4",
+    "expression": "5820",
+    "unit": "mm",
+    "comment": "rib 4 Time"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rise4",
+    "expression": "1830",
+    "unit": "mm",
+    "comment": "rib 4 Time"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "span5",
+    "expression": "5320",
+    "unit": "mm",
+    "comment": "rib 5 Air"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rise5",
+    "expression": "1560",
+    "unit": "mm",
+    "comment": "rib 5 Air"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "span6",
+    "expression": "4940",
+    "unit": "mm",
+    "comment": "rib 6 Sweetness"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "rise6",
+    "expression": "1300",
+    "unit": "mm",
+    "comment": "rib 6 Sweetness"
+   }
+  },
+  {
+   "command": "solid.torus",
+   "params": {
+    "major": "disc_d/2 - rim_d/2",
+    "minor": "rim_d/2",
+    "body_name": "Rim"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": "disc_d - rim_d",
+    "height": 6,
+    "base": [
+     0,
+     0,
+     -3
+    ],
+    "body_name": "Mesh"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 1 path",
+    "plane": {
+     "origin": [
+      0,
+      "-2.5 * spacing",
+      "rib_base"
+     ],
+     "x_dir": [
+      1,
+      0,
+      0
+     ],
+     "y_dir": [
+      0,
+      0,
+      1
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.equation_curve",
+   "params": {
+    "x": "span1 / 2 * cos(t)",
+    "y": "rise1 * sin(t)",
+    "start": 0,
+    "end": "pi"
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 1 path",
+    "path": [
+     "s1"
+    ],
+    "diameter": "tube_d",
+    "body_name": "Rib 1 Warmth"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 2 path",
+    "plane": {
+     "origin": [
+      0,
+      "-1.5 * spacing",
+      "rib_base"
+     ],
+     "x_dir": [
+      1,
+      0,
+      0
+     ],
+     "y_dir": [
+      0,
+      0,
+      1
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.equation_curve",
+   "params": {
+    "x": "span2 / 2 * cos(t)",
+    "y": "rise2 * sin(t)",
+    "start": 0,
+    "end": "pi"
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 2 path",
+    "path": [
+     "s1"
+    ],
+    "diameter": "tube_d",
+    "body_name": "Rib 2 Leaf"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 3 path",
+    "plane": {
+     "origin": [
+      0,
+      "-0.5 * spacing",
+      "rib_base"
+     ],
+     "x_dir": [
+      1,
+      0,
+      0
+     ],
+     "y_dir": [
+      0,
+      0,
+      1
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.equation_curve",
+   "params": {
+    "x": "span3 / 2 * cos(t)",
+    "y": "rise3 * sin(t)",
+    "start": 0,
+    "end": "pi"
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 3 path",
+    "path": [
+     "s1"
+    ],
+    "diameter": "tube_d",
+    "body_name": "Rib 3 Water"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 4 path",
+    "plane": {
+     "origin": [
+      0,
+      "0.5 * spacing",
+      "rib_base"
+     ],
+     "x_dir": [
+      1,
+      0,
+      0
+     ],
+     "y_dir": [
+      0,
+      0,
+      1
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.equation_curve",
+   "params": {
+    "x": "span4 / 2 * cos(t)",
+    "y": "rise4 * sin(t)",
+    "start": 0,
+    "end": "pi"
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 4 path",
+    "path": [
+     "s1"
+    ],
+    "diameter": "tube_d",
+    "body_name": "Rib 4 Time"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 5 path",
+    "plane": {
+     "origin": [
+      0,
+      "1.5 * spacing",
+      "rib_base"
+     ],
+     "x_dir": [
+      1,
+      0,
+      0
+     ],
+     "y_dir": [
+      0,
+      0,
+      1
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.equation_curve",
+   "params": {
+    "x": "span5 / 2 * cos(t)",
+    "y": "rise5 * sin(t)",
+    "start": 0,
+    "end": "pi"
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 5 path",
+    "path": [
+     "s1"
+    ],
+    "diameter": "tube_d",
+    "body_name": "Rib 5 Air"
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "name": "Rib 6 path",
+    "plane": {
+     "origin": [
+      0,
+      "2.5 * spacing",
+      "rib_base"
+     ],
+     "x_dir": [
+      1,
+      0,
+      0
+     ],
+     "y_dir": [
+      0,
+      0,
+      1
+     ]
+    }
+   }
+  },
+  {
+   "command": "sketch.equation_curve",
+   "params": {
+    "x": "span6 / 2 * cos(t)",
+    "y": "rise6 * sin(t)",
+    "start": 0,
+    "end": "pi"
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.pipe",
+   "params": {
+    "path_sketch": "Rib 6 path",
+    "path": [
+     "s1"
+    ],
+    "diameter": "tube_d",
+    "body_name": "Rib 6 Sweetness"
+   }
+  }
+ ]
+}

@@ -32,4 +32,8 @@ for item in root.rglob("*"):
     if item.suffix == ".html":
         assert "connect-src 'none'" in source
         assert not re.search(r"\b(?:fetch\(|WebSocket|EventSource|getUserMedia|sendBeacon)", source)
+sizes = re.findall(r"\{d:([\d.]+),", (root / "simulators/foam.html").read_text(encoding="utf-8"))
+listed = r"\D+".join(re.escape(f"{float(s):.1f}") for s in sizes)
+for name in ("docs/honey-foam.md", "assets/diagrams/foam-on-mother-v04.svg"):
+    assert len(sizes) == 9 and re.search(listed, (root / name).read_text(encoding="utf-8")), f"Dome sizes in {name} differ from the simulator"
 print("Public text, local links, offline HTML and diagram pairing checks passed.")

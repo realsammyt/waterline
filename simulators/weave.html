@@ -97,7 +97,7 @@
   const above=pick('[data-above]'), views=[...root.querySelectorAll('[data-view]')], lights=[...root.querySelectorAll('[data-light]')], choices=[...root.querySelectorAll('[data-value]')];
   const ns='http://www.w3.org/2000/svg';
   // same six ribs as models/gen_rim.py: each is a circular arc footed on the ring, turned (s) and tipped (lean)
-  const ringR=3.35, base=.26, turn=25*Math.PI/180;
+  const ringR=3.35, base=.07, turn=25*Math.PI/180;
   const model=[
     {s:-1,k:-1,lean:25,rise:1.15},
     {s:1,k:1,lean:10,rise:1.55},
@@ -188,7 +188,7 @@
     }
     pick('[data-lines]').setAttribute('d',traces.join(' '));
     // the mother: a floating ring about 7 m across, open water inside
-    pick('[data-float]').setAttribute('d',path(Array.from({length:48},(_,k)=>project(ringR*Math.cos(k*Math.PI/24),.1,ringR*Math.sin(k*Math.PI/24))))+' Z');
+    pick('[data-float]').setAttribute('d',path(Array.from({length:48},(_,k)=>project(ringR*Math.cos(k*Math.PI/24),.04,ringR*Math.sin(k*Math.PI/24))))+' Z');
     const night=mode==='night', order=model.map((r,i)=>i).sort((i,j)=>(model[i].z-model[j].z)*ca);
     for(const i of order){
       const r=model[i], q=rec[i], pts=[], refl=[], cut=[], mcut=[];

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>WATERLINE | Six Rings on Mother</title>
+<meta name="description" content="Offline, illustrative WATERLINE concept simulator.">
+<link rel="icon" href="data:,"><style>
+:root{color-scheme:dark;--background:#14202a;--foreground:#e9f3f7;--muted:#294b5c;--muted-foreground:#a9c7d5;--secondary:#101924;--orange:#ffc087;--font-size-base:16px;background:#0d141b;color:var(--foreground);font:100%/1.6 system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0}main{max-width:890px;margin:0 auto;padding:clamp(1rem,4vw,2.6rem)}h1{line-height:1.15}a{color:#a6e6f3}a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #a6e6f3;outline-offset:3px}.viz-controls,.viz-row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}.viz-row{max-width:100%}.btn,.form-select,button,select{font:inherit;color:inherit;background:#223947;border:1px solid #819ba7;border-radius:.4rem;min-height:44px;padding:.32rem .65rem}button[aria-pressed="true"]{background:#c1e4ef;color:#112432;border:2px solid #fff}.form-range{min-height:32px;accent-color:#b6e6f3}.text-small,.note{font-size:.94rem;color:var(--muted-foreground)}svg{border-radius:.5rem;border:1px solid #456374}.card{padding:clamp(.55rem,2vw,1rem);background:var(--background);border:1px solid #456374;border-radius:.5rem}.jump{margin-bottom:.5rem}.tabular-nums{font-variant-numeric:tabular-nums}
+</style></head>
+<body><main><nav class="jump" aria-label="Studies"><a href="../index.html">WATERLINE studies</a></nav>
+<p class="note">v0.5 / Current</p><h1>Six Rings on Mother</h1><p>Six fixed half rings spring from one floating ring and cross over open water. Calm water finishes them into one woven eye; a wake takes the lower half away. Face it with Shore, walk round with Weave and Edge, look down with Above, change the simulated water, add choices for the six values, and press Next hour: one thread of light passes through, then the chosen ring holds a low band of its own tone that travels from one foot to the other through the hour, with any close runners-up as a chord. A simulated hour takes 30 seconds. Audio is optional and starts off.</p><div class="card">
+<div id="waterline-weave-03" data-light-mode="day">
+  <div class="viz-controls weave-controls">
+    <label class="form-label weave-angle">
+      <span>Viewpoint <output class="tabular-nums" data-angle>5°</output></span>
+      <input class="form-range" type="range" min="0" max="88" step="1" value="5" data-yaw>
+    </label>
+    <div class="viz-row" role="group" aria-label="Viewpoint presets">
+      <button type="button" class="btn" data-view="5" aria-pressed="true">Shore</button>
+      <button type="button" class="btn" data-view="40" aria-pressed="false">Weave</button>
+      <button type="button" class="btn" data-view="82" aria-pressed="false">Edge</button>
+      <button type="button" class="btn" data-above aria-pressed="false">Above</button>
+    </div>
+  </div>
+  <svg class="weave-model" role="img" aria-labelledby="weave-title-03 weave-desc-03" focusable="false">
+    <title id="weave-title-03">WATERLINE six half rings on a floating ring in a virtual water plane</title>
+    <desc id="weave-desc-03">Six fixed physical half rings footed on one floating ring, three tall and three low, crossing one another, and six broken reflections below. Changing the viewpoint slides the crossings; from above they read as a weave and no reflection shows. Each ring carries one value. A simulated light cue hands off between the ribs, then the most chosen value stays lit, with close runners-up dimmer; weather changes the sequence and the appearance of the reflection.</desc>
+    <defs>
+      <linearGradient id="weave-water-03" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" class="weave-water-top"></stop><stop offset="100%" class="weave-water-bottom"></stop>
+      </linearGradient>
+      <clipPath id="weave-reflect-clip-03"><rect data-clip></rect></clipPath>
+    </defs>
+    <rect data-sky class="weave-sky"></rect>
+    <rect data-water class="weave-water"></rect>
+    <path data-lines class="weave-lines" aria-hidden="true"></path>
+    <path data-line class="weave-waterline" aria-hidden="true"></path>
+    <g data-reflections clip-path="url(#weave-reflect-clip-03)" aria-hidden="true"></g>
+    <path data-float class="weave-float" aria-hidden="true"></path>
+    <g data-ribs aria-hidden="true"></g>
+  </svg>
+  <div class="viz-controls weave-controls weave-actions">
+    <label class="form-label weave-weather">
+      <span>Simulated weather</span>
+      <select class="form-select" data-weather>
+        <option value="calm">Calm water</option>
+        <option value="breeze">Crosswind</option>
+        <option value="wake">Passing wake</option>
+      </select>
+    </label>
+    <div class="viz-row" role="group" aria-label="Lighting">
+      <button class="btn" type="button" data-light="day" aria-pressed="true">Day</button>
+      <button class="btn" type="button" data-light="night" aria-pressed="false">Night</button>
+      <button class="btn btn-primary" type="button" data-play>Next hour</button>
+    </div>
+    <label class="form-check"><input class="form-check-input" type="checkbox" data-sound><span class="form-check-label">Sound (optional)</span></label>
+  </div>
+  <div class="viz-row" role="group" aria-label="Simulated choices for the next hour, one value per ring">
+    <button class="btn" type="button" data-value="0"></button>
+    <button class="btn" type="button" data-value="1"></button>
+    <button class="btn" type="button" data-value="2"></button>
+    <button class="btn" type="button" data-value="3"></button>
+    <button class="btn" type="button" data-value="4"></button>
+    <button class="btn" type="button" data-value="5"></button>
+  </div>
+  <p class="text-small weave-status" aria-live="polite" aria-atomic="true" data-status>Day · Calm water. Offline study; no device connected.</p>
+</div>
+<style>
+#waterline-weave-03{--ww-sky:var(--background);--ww-water:var(--muted);--ww-ember:var(--orange);--ww-rib:var(--foreground);--ww-silver:var(--muted-foreground);display:grid;gap:calc(var(--font-size-base, 14px)*.7);min-width:0}
+#waterline-weave-03[data-light-mode="night"]{--ww-sky:var(--secondary);--ww-water:var(--muted)}
+#waterline-weave-03 .weave-controls{row-gap:calc(var(--font-size-base, 14px)*.4);column-gap:calc(var(--font-size-base, 14px)*.9);align-items:end}
+#waterline-weave-03 .weave-angle{flex:1 1 11rem;min-width:0}
+#waterline-weave-03 .weave-angle span{display:flex;justify-content:space-between;gap:.5em}
+#waterline-weave-03 .weave-angle input{width:100%}
+#waterline-weave-03 .weave-weather{display:grid;gap:calc(var(--font-size-base, 14px)*.25);min-width:0}
+#waterline-weave-03 .weave-model{display:block;width:100%}
+#waterline-weave-03 .weave-sky{fill:var(--ww-sky)}
+#waterline-weave-03 .weave-water{fill:url(#weave-water-03)}
+#waterline-weave-03 .weave-water-top{stop-color:var(--ww-water);stop-opacity:.95}
+#waterline-weave-03 .weave-water-bottom{stop-color:var(--ww-water);stop-opacity:.16}
+#waterline-weave-03 .weave-lines{fill:none;stroke:var(--ww-silver);stroke-opacity:.19;stroke-width:1}
+#waterline-weave-03 .weave-waterline{fill:none;stroke:var(--ww-silver);stroke-opacity:.54;stroke-width:1}
+#waterline-weave-03 .weave-float{fill:none;stroke:var(--ww-rib);stroke-opacity:.6;stroke-width:3.2}
+#waterline-weave-03 .weave-arc{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:var(--ww-rib)}
+#waterline-weave-03 .weave-highlight{stroke:var(--background);pointer-events:none}
+#waterline-weave-03 .weave-reflect{stroke-dasharray:8 4 4 6}
+#waterline-weave-03 .weave-ember{stroke:var(--ww-ember);pointer-events:none;transition:opacity .29s ease}
+#waterline-weave-03 .weave-status{margin:0;min-height:2.4em}
+@media(prefers-reduced-motion:reduce){#waterline-weave-03 .weave-ember{transition:none}}
+</style>
+<script>
+(()=>{
+  const root=document.getElementById('waterline-weave-03');
+  const pick=(s)=>root.querySelector(s);
+  const svg=pick('.weave-model'), yaw=pick('[data-yaw]'), angle=pick('[data-angle]'), weather=pick('[data-weather]'), play=pick('[data-play]'), sound=pick('[data-sound]'), status=pick('[data-status]');
+  const above=pick('[data-above]'), views=[...root.querySelectorAll('[data-view]')], lights=[...root.querySelectorAll('[data-light]')], choices=[...root.querySelectorAll('[data-value]')];
+  const ns='http://www.w3.org/2000/svg';
+  // same six ribs as models/gen_rim.py: each is a circular arc footed on the ring, turned (s) and tipped (lean)
+  const ringR=3.35, base=.07, turn=25*Math.PI/180;
+  const model=[
+    {s:-1,k:-1,lean:25,rise:1.15},
+    {s:1,k:1,lean:10,rise:1.55},
+    {s:1,k:0,lean:10,rise:1.85},
+    {s:1,k:-1,lean:10,rise:1.70},
+    {s:-1,k:0,lean:25,rise:1.30},
+    {s:-1,k:1,lean:25,rise:1.00}
+  ].map(r=>{
+    const A=r.s*turn, t=r.lean*Math.PI/180, d=r.k*.9, nx=-Math.sin(A), nz=Math.cos(A);
+    const half=Math.sqrt(ringR*ringR-d*d), rad=(half*half+r.rise*r.rise)/(2*r.rise), th=Math.asin(half/rad);
+    return {z:d*nz+r.rise*Math.sin(t)*nz, at:(f)=>{
+      const a=-th+2*th*f, u=rad*Math.sin(a), v=rad*Math.cos(a)-(rad-r.rise);
+      return [d*nx+u*Math.cos(A)+v*Math.sin(t)*nx, base+v*Math.cos(t), d*nz+u*Math.sin(A)+v*Math.sin(t)*nz];
+    }};
+  });
+  console.assert(Math.abs(Math.hypot(model[2].at(0)[0],model[2].at(0)[2])-ringR)<1e-6&&Math.abs(model[2].at(.5)[1]-base-1.85*Math.cos(10*Math.PI/180))<1e-6);
+  const presets={
+    calm:{label:'Calm water', amp:.55,freq:.40,order:[0,2,4,5,3,1],time:[500,500,500,500,500,500],read:'interlaced sequence'},
+    breeze:{label:'Crosswind',amp:2.6,freq:.39,order:[1,3,5,4,2,0],time:[380,420,460,500,550,580],read:'reverse sequence'},
+    wake:{label:'Passing wake',amp:4.6,freq:.25,order:[0,2,4,5,3,1],time:[340,340,680,340,340,680],read:'syncopated sequence'}
+  };
+  // one value per ring, each with a tone from a dusk range: gold through copper and rose to violet, tallest warmest.
+  // No red, green, white, yellow or blue, which mean something on the water.
+  const tones=['#d94fc7','#ffe08a','#cf5a36','#ff9a2e','#ff8fa8','#9a86ff'];
+  const values=['Warmth','Leaf','Water','Time','Air','Sweetness'];
+  // the most chosen value leads; any value with at least half its count joins as a chord, dimmer
+  const chord=(v)=>{const top=Math.max(...v);return v.map(n=>!top?0:n===top?.94:n*2>=top?.48:0);};
+  console.assert(chord([4,2,1,0,0,0]).join()==='0.94,0.48,0,0,0,0'&&chord([0,0,0,0,0,0]).join()==='0,0,0,0,0,0');
+  const hourMs=30000; // one simulated hour
+  let hour=.5, raf=0, mode='day', active=-1, running=false, timer=0, phase=0, votes=values.map(()=>0), held=values.map(()=>0);
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+  const Audio=window.AudioContext||window.webkitAudioContext;
+  let audio=null, voices=[];
+  if(!Audio){sound.disabled=true;sound.closest('label').hidden=true;}
+  function enableAudio(){
+    if(!Audio||!sound.checked)return;
+    try{audio ||= new Audio(); audio.resume().catch(()=>{});}catch(_){}
+  }
+  function muteAudio(){
+    voices.forEach(voice=>{try{voice.stop();}catch(_){}});
+    voices=[];
+  }
+  function tone(rib,delay=0,len=.23){
+    if(!audio||!sound.checked)return;
+    try{
+      const at=audio.currentTime+delay, o=audio.createOscillator(), g=audio.createGain();
+      o.type='sine';o.frequency.value=[440,329.63,261.63,293.66,392,523.25][rib]; // tallest ring lowest: C D E G A C
+      g.gain.setValueAtTime(0,at);
+      g.gain.linearRampToValueAtTime(.027,at+.035);
+      g.gain.exponentialRampToValueAtTime(.0001,at+len);
+      o.connect(g);g.connect(audio.destination);voices.push(o);
+      o.onended=()=>{voices=voices.filter(v=>v!==o);o.disconnect();g.disconnect();};
+      o.start(at);o.stop(at+len+.01);
+    }catch(_){}
+  }
+  function el(cls){const e=document.createElementNS(ns,'path');e.setAttribute('class',cls);return e;}
+  const rec=model.map((_,i)=>{
+    const refl=el('weave-arc weave-reflect'), mirror=el('weave-arc weave-reflect weave-ember');
+    pick('[data-reflections]').append(refl,mirror);
+    const glow=el('weave-arc weave-ember');
+    glow.style.stroke=mirror.style.stroke=tones[i];
+    return {main:el('weave-arc'), inset:el('weave-arc weave-highlight'), glow,refl,mirror};
+  });
+  const rect=(el,x,y,w,h)=>{for(const [k,v] of Object.entries({x,y,width:w,height:h}))el.setAttribute(k,v);};
+  const path=(points)=>points.map((pt,i)=>(i?'L':'M')+pt.map(n=>n.toFixed(2)).join(' ')).join(' ');
+  function setStatus(s){if(status.textContent!==s)status.textContent=s;}
+  function draw(){
+    const width=Math.max(1,Math.round(svg.getBoundingClientRect().width));
+    const top=above.getAttribute('aria-pressed')==='true';
+    const height=Math.max(220,Math.min(320,Math.round(width*.49))), level=top?0:height*.49;
+    svg.setAttribute('viewBox','0 0 '+width+' '+height);
+    svg.style.height=height+'px';
+    const a=Number(yaw.value), rad=a*Math.PI/180, ca=Math.cos(rad), sa=Math.sin(rad), scale=Math.min(width*.111,height*.195);
+    const p=presets[weather.value]||presets.calm;
+    const project=(x,y,z)=>{
+      const depth=x*sa+z*ca, cross=x*ca-z*sa, lens=18/(18-depth);
+      if(top)return [width*.5+height*.125*cross,height*.5+height*.125*depth];
+      return [width*.5+scale*cross*lens,level+scale*(-y+.073*depth)*lens];
+    };
+    rect(pick('[data-sky]'),0,0,width,level);
+    rect(pick('[data-water]'),0,level,width,height-level);
+    rect(pick('[data-clip]'),0,level,width,height-level);
+    pick('[data-line]').setAttribute('d','M0 '+level+' H'+width);
+    const traces=[];
+    for(let n=0;n<15;n++){
+      const yy=level+7+n*7.5, xx=(n*97+16)%width, len=Math.min(width-xx-3,20+((n*43)%Math.max(25,width*.27)));
+      if(yy<height-5&&len>2)traces.push('M'+xx+' '+yy+' Q'+(xx+len*.49)+' '+(yy-p.amp)+' '+(xx+len)+' '+yy);
+    }
+    pick('[data-lines]').setAttribute('d',traces.join(' '));
+    // the mother: a floating ring about 7 m across, open water inside
+    pick('[data-float]').setAttribute('d',path(Array.from({length:48},(_,k)=>project(ringR*Math.cos(k*Math.PI/24),.04,ringR*Math.sin(k*Math.PI/24))))+' Z');
+    const night=mode==='night', order=model.map((r,i)=>i).sort((i,j)=>(model[i].z-model[j].z)*ca);
+    for(const i of order){
+      const r=model[i], q=rec[i], pts=[], refl=[], cut=[], mcut=[];
+      for(let j=0;j<=88;j++){
+        const [x,y,z]=r.at(j/88);
+        const rp=project(x,-y,z);
+        rp[0]+=Math.sin(rp[1]*p.freq+rp[0]*.019)*p.amp*Math.min(1,y*1.8);
+        pts.push(project(x,y,z));refl.push(rp);
+      }
+      // the thread flashes at the crown; a held band travels from one foot to the other through the hour
+      const mid=i===active?44:4+hour*80;
+      for(let k=-4;k<=4;k++){
+        const [x,y,z]=r.at((mid+k)/88), rp=project(x,-y,z);
+        rp[0]+=Math.sin(rp[1]*p.freq+rp[0]*.019)*p.amp*Math.min(1,y*1.8);
+        cut.push(project(x,y,z));mcut.push(rp);
+      }
+      const size=Math.max(2.5,Math.min(5.4,width*.009));
+      q.main.setAttribute('d',path(pts));q.main.style.strokeWidth=size;q.main.style.opacity=night?.66:.82;
+      q.inset.setAttribute('d',path(pts));q.inset.style.strokeWidth=Math.max(1,size*.25);q.inset.style.opacity=night?.19:.56;
+      q.refl.setAttribute('d',path(refl));q.refl.style.strokeWidth=size*.69;q.refl.style.opacity=top?0:night?.25:.37;
+      q.refl.style.strokeDasharray=weather.value==='wake'?'4 7 8 6':weather.value==='breeze'?'7 5 4 6':'11 4 6 5';
+      q.glow.setAttribute('d',path(cut));q.glow.style.strokeWidth=size*.95;q.glow.style.opacity=night?(i===active?.94:active<0?held[i]:0):0;
+      q.mirror.setAttribute('d',path(mcut));q.mirror.style.strokeWidth=size*.85;q.mirror.style.opacity=top||!night?0:i===active?.53:active<0?held[i]*.55:0;
+      pick('[data-ribs]').append(q.main,q.inset,q.glow);
+    }
+    root.dataset.lightMode=mode;
+    angle.textContent=a+'°';
+    yaw.setAttribute('aria-valuetext',a+' degrees from front'+(top?', seen from above':''));
+    views.forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.view)===a)));
+    lights.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.light===mode)));
+    play.textContent=running?'Stop thread':'Next hour';
+    choices.forEach((b,i)=>{b.textContent=values[i]+' '+votes[i];b.style.borderBottom='4px solid '+tones[i];b.setAttribute('aria-label',values[i]+', ring '+(i+1)+', '+votes[i]+' simulated choices');});
+  }
+  function idle(suffix=''){
+    running=false;active=-1;phase=0;hour=.5;clearTimeout(timer);cancelAnimationFrame(raf);muteAudio();
+    setStatus((mode==='day'?'Day':'Night')+' · '+(presets[weather.value]||presets.calm).label+'. '+(suffix||'Offline study; no device connected.'));
+    draw();
+  }
+  function settle(prefix=''){
+    held=chord(votes);votes=values.map(()=>0);
+    const lead=values.filter((_,i)=>held[i]>.5), join=values.filter((_,i)=>held[i]>0&&held[i]<.5);
+    idle(prefix+(lead.length?lead.join(' and ')+(lead.length>1?' share':' holds')+' the hour'+(join.length?', with '+join.join(' and ')+' as a chord':'')+'. Simulated choices; no device connected.':'No choices this hour. Nothing stays lit.'));
+    held.forEach((h,i)=>{if(h)tone(i,0,1.6);});
+    if(reduced.matches||!held.some(h=>h))return; // reduced motion: the bands rest at the crown
+    const t0=performance.now(), step=(now)=>{hour=Math.min(1,(now-t0)/hourMs);draw();if(hour<1)raf=requestAnimationFrame(step);};
+    hour=0;raf=requestAnimationFrame(step);
+  }
+  function start(){
+    mode='night';running=true;phase=0;hour=.5;cancelAnimationFrame(raf);held=values.map(()=>0);enableAudio();
+    const p=presets[weather.value]||presets.calm;
+    if(reduced.matches){settle('Thread order: '+p.order.map(i=>i+1).join(' → ')+'. Reduced motion preview. ');return;}
+    setStatus(p.label+' · '+p.read+' · '+p.order.map(i=>i+1).join(' → ') + '.');
+    const tick=()=>{
+      if(!running)return;
+      if(phase>=p.order.length){settle();return;}
+      active=p.order[phase];tone(active);
+      const interval=p.time[phase++];
+      draw();
+      timer=setTimeout(tick,interval);
+    };
+    tick();
+  }
+  sound.addEventListener('change',()=>{if(!sound.checked)muteAudio();});
+  weather.addEventListener('change',()=>{held=values.map(()=>0);idle();});
+  yaw.addEventListener('input',draw);
+  above.addEventListener('click',()=>{above.setAttribute('aria-pressed',String(above.getAttribute('aria-pressed')!=='true'));draw();});
+  views.forEach(b=>b.addEventListener('click',()=>{yaw.value=b.dataset.view;draw();}));
+  lights.forEach(b=>b.addEventListener('click',()=>{mode=b.dataset.light;held=values.map(()=>0);idle();}));
+  choices.forEach((b,i)=>b.addEventListener('click',()=>{votes[i]++;draw();}));
+  play.addEventListener('click',()=>{if(running){held=values.map(()=>0);idle('Thread stopped.');}else start();});
+  new ResizeObserver(draw).observe(svg);
+  idle();
+})();
+</script>
+</div><p class="note">Illustrative only. No site or weather connection, device access, telemetry, or control of physical equipment.</p><noscript>This study needs JavaScript. See the diagram links on the WATERLINE studies page.</noscript></main></body></html>

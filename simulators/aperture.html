@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>WATERLINE | Aperture study</title>
+<meta name="description" content="Offline, illustrative WATERLINE concept simulator.">
+<link rel="icon" href="data:,"><style>
+:root{color-scheme:dark;--background:#14202a;--foreground:#e9f3f7;--muted:#294b5c;--muted-foreground:#a9c7d5;--secondary:#101924;--orange:#ffc087;--font-size-base:16px;background:#0d141b;color:var(--foreground);font:100%/1.6 system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0}main{max-width:890px;margin:0 auto;padding:clamp(1rem,4vw,2.6rem)}h1{line-height:1.15}a{color:#a6e6f3}a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #a6e6f3;outline-offset:3px}.viz-controls,.viz-row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}.viz-row{max-width:100%}.btn,.form-select,button,select{font:inherit;color:inherit;background:#223947;border:1px solid #819ba7;border-radius:.4rem;min-height:44px;padding:.32rem .65rem}button[aria-pressed="true"]{background:#c1e4ef;color:#112432;border:2px solid #fff}.form-range{min-height:32px;accent-color:#b6e6f3}.text-small,.note{font-size:.94rem;color:var(--muted-foreground)}svg{border-radius:.5rem;border:1px solid #456374}.card{padding:clamp(.55rem,2vw,1rem);background:var(--background);border:1px solid #456374;border-radius:.5rem}.jump{margin-bottom:.5rem}.tabular-nums{font-variant-numeric:tabular-nums}
+</style></head>
+<body><main><nav class="jump" aria-label="Studies"><a href="../index.html">WATERLINE studies</a></nav>
+<p class="note">v0.2 / Archive</p><h1>Aperture study</h1><p>Three fixed ribs in an earlier optical exploration. Shore tap and event release are local visual previews, not control features.</p><div class="card">
+<div id="waterline-aperture-26">
+  <div class="viz-controls wl-inputs">
+    <label class="form-label wl-angle">
+      <span>Viewpoint <output class="tabular-nums" data-angle>5°</output></span>
+      <input class="form-range" type="range" min="0" max="88" step="1" value="5" data-yaw>
+    </label>
+    <div class="viz-row" role="group" aria-label="Viewpoint presets">
+      <button type="button" class="btn" data-view="5" aria-pressed="true">Align</button>
+      <button type="button" class="btn" data-view="40" aria-pressed="false">Open</button>
+      <button type="button" class="btn" data-view="82" aria-pressed="false">Edge</button>
+    </div>
+  </div>
+  <svg class="wl-model" role="img" aria-labelledby="wl-title-26 wl-desc-26" focusable="false">
+    <title id="wl-title-26">WATERLINE fixed-geometry viewpoint study</title>
+    <desc id="wl-desc-26">Three separate arches over a reflective water plane. Move the viewpoint to see the physical ribs align or separate. Their broken mirror image is not a submerged structure.</desc>
+    <defs>
+      <linearGradient id="wl-water-26" x2="0" y2="1">
+        <stop offset="0%" class="wl-water-top"></stop><stop offset="100%" class="wl-water-bottom"></stop>
+      </linearGradient>
+    </defs>
+    <rect data-sky class="wl-sky"></rect>
+    <rect data-water class="wl-water"></rect>
+    <path data-lines class="wl-lines" aria-hidden="true"></path>
+    <path data-line class="wl-waterline" aria-hidden="true"></path>
+    <g data-reflections aria-hidden="true"></g>
+    <path data-float class="wl-float" aria-hidden="true"></path>
+    <g data-ribs aria-hidden="true"></g>
+  </svg>
+  <div class="viz-controls wl-inputs wl-light-controls">
+    <div class="viz-row" role="group" aria-label="Lighting">
+      <button class="btn" type="button" data-light="day" aria-pressed="true">Day</button>
+      <button class="btn" type="button" data-light="night" aria-pressed="false">Night</button>
+    </div>
+    <div class="viz-row" role="group" aria-label="Simulated light cues">
+      <button class="btn" type="button" data-cue="participant" aria-pressed="false">Shore tap</button>
+      <button class="btn" type="button" data-cue="event" aria-pressed="false">Event release</button>
+    </div>
+  </div>
+  <p class="text-small wl-status" aria-live="polite" aria-atomic="true" data-status>Day · Ribs overlap. Simulated only; no site or device connected.</p>
+</div>
+<style>
+#waterline-aperture-26{--wl-sky:var(--background);--wl-water:var(--muted);--wl-ember:var(--orange);--wl-rib:var(--foreground);--wl-silver:var(--muted-foreground);display:grid;gap:calc(var(--font-size-base, 14px)*.66);min-width:0}
+#waterline-aperture-26[data-light-mode="night"]{--wl-sky:var(--muted);--wl-water:var(--secondary)}
+#waterline-aperture-26 .wl-inputs{row-gap:calc(var(--font-size-base, 14px)*.3);column-gap:calc(var(--font-size-base, 14px)*.8);align-items:center}
+#waterline-aperture-26 .wl-angle{flex:1 1 11rem;min-width:0}
+#waterline-aperture-26 .wl-angle span{display:flex;justify-content:space-between;gap:.5em}
+#waterline-aperture-26 .wl-angle input{width:100%}
+#waterline-aperture-26 .wl-model{display:block;width:100%}
+#waterline-aperture-26 .wl-sky{fill:var(--wl-sky)}
+#waterline-aperture-26 .wl-water{fill:url(#wl-water-26)}
+#waterline-aperture-26 .wl-water-top{stop-color:var(--wl-water);stop-opacity:.91}
+#waterline-aperture-26 .wl-water-bottom{stop-color:var(--wl-water);stop-opacity:.19}
+#waterline-aperture-26 .wl-lines{fill:none;stroke:var(--wl-silver);stroke-opacity:.21;stroke-width:1}
+#waterline-aperture-26 .wl-waterline{fill:none;stroke:var(--wl-silver);stroke-opacity:.53;stroke-width:1}
+#waterline-aperture-26 .wl-float{fill:var(--wl-silver);fill-opacity:.52;stroke:var(--wl-silver);stroke-width:1}
+#waterline-aperture-26 .wl-arc{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:var(--wl-rib);transition:stroke .4s ease,opacity .55s ease}
+#waterline-aperture-26 .wl-arc-detail{stroke:var(--background);pointer-events:none}
+#waterline-aperture-26 .wl-reflect{stroke-dasharray:8 4 4 6}
+#waterline-aperture-26 .wl-ember{stroke:var(--wl-ember);pointer-events:none}
+#waterline-aperture-26 .wl-status{margin:0}
+@media(prefers-reduced-motion:reduce){#waterline-aperture-26 .wl-arc{transition:none}}
+</style>
+<script>
+(()=>{
+  const root=document.getElementById('waterline-aperture-26');
+  const pick=(s)=>root.querySelector(s);
+  const svg=pick('.wl-model'), yaw=pick('[data-yaw]'), angle=pick('[data-angle]'), status=pick('[data-status]');
+  const viewButtons=[...root.querySelectorAll('[data-view]')], lightButtons=[...root.querySelectorAll('[data-light]')], cues=[...root.querySelectorAll('[data-cue]')];
+  const ns='http://www.w3.org/2000/svg';
+  const model=[
+    {span:6,rise:2,z:0,weight:1},
+    {span:5.52,rise:1.68,z:-.64,weight:.78},
+    {span:5.18,rise:1.44,z:.64,weight:.63}
+  ];
+  let mode='day', cue='idle', timer=0;
+  function el(cls){
+    const e=document.createElementNS(ns,'path'); e.setAttribute('class',cls);return e;
+  }
+  const rec=model.map(()=> {
+    const main=el('wl-arc'), inset=el('wl-arc wl-arc-detail'), glow=el('wl-arc wl-ember'), refl=el('wl-arc wl-reflect'), reflectedGlow=el('wl-arc wl-reflect wl-ember');
+    pick('[data-reflections]').append(refl,reflectedGlow);
+    return {main,inset,glow,refl,reflectedGlow};
+  });
+  function setRect(rect,x,y,w,h){for(const [key,value] of Object.entries({x,y,width:w,height:h}))rect.setAttribute(key,value);}
+  const path=(points)=>points.map((v,i)=>(i?'L':'M')+v.map(z=>z.toFixed(2)).join(' ')).join(' ');
+  function draw(){
+    const width=Math.max(1,Math.round(svg.getBoundingClientRect().width));
+    const height=Math.max(194,Math.min(308,Math.round(width*.51))), level=height*.49;
+    svg.setAttribute('viewBox','0 0 '+width+' '+height);
+    svg.style.height=height+'px';
+    const a=Number(yaw.value), rad=a*Math.PI/180, ca=Math.cos(rad), sa=Math.sin(rad), scale=Math.min(width*.123,height*.20);
+    const project=(x,y,z)=>{
+      const rotatedDepth=x*sa+z*ca;
+      const rotatedX=x*ca-z*sa;
+      const f=18/(18-rotatedDepth);
+      return [width*.5+scale*rotatedX*f,level+scale*(-y+.073*rotatedDepth)*f];
+    };
+    setRect(pick('[data-sky]'),0,0,width,level);
+    setRect(pick('[data-water]'),0,level,width,height-level);
+    pick('[data-line]').setAttribute('d','M0 '+level+' H'+width);
+    const rip=[];
+    for(let n=0;n<12;n++){
+      const yy=level+6+n*7.5, xx=(n*97+16)%width;
+      const len=Math.min(width-xx-3,17+((n*43)%Math.max(25,width*.28)));
+      if(yy<height-5&&len>1)rip.push('M'+xx+' '+yy+' Q'+(xx+len*.48)+' '+(yy-3)+' '+(xx+len)+' '+yy);
+    }
+    pick('[data-lines]').setAttribute('d',rip.join(' '));
+    const corners=[[-3.06,-.03,-.83],[3.06,-.03,-.83],[3.06,-.03,.83],[-3.06,-.03,.83]].map(v=>project(...v));
+    pick('[data-float]').setAttribute('d',path(corners)+' Z');
+    const drawOrder=model.map((r,i)=>i).sort((i,j)=>(model[i].z-model[j].z)*ca);
+    const night=mode==='night', active=cue!=='idle';
+    for(const i of drawOrder){
+      const r=model[i], p=rec[i], pts=[],mir=[],cut=[],mirrorCut=[];
+      for(let j=0;j<=80;j++){
+        const t=Math.PI*j/80, x=-r.span*.5*Math.cos(t), y=r.rise*Math.sin(t);
+        const rp=project(x,-y,r.z);
+        rp[0]+=Math.sin(rp[1]*.41)*Math.min(5.5,y*3.4);
+        pts.push(project(x,y,r.z));mir.push(rp);
+        const lead=cue==='event' ? [17,11,7][i] : cue==='participant' ? [28,41,55][i] : [27,45,57][i];
+        const count=cue==='event'?54:cue==='participant'?23:13;
+        if(j>=lead&&j<=lead+count){cut.push(pts[j]);mirrorCut.push(rp);}
+      }
+      const thickness=Math.max(3,Math.min(8,width*.013))*r.weight;
+      p.main.setAttribute('d',path(pts));p.main.style.strokeWidth=thickness;p.main.style.opacity=night?.54+r.weight*.12:.57+r.weight*.36;
+      p.inset.setAttribute('d',path(pts));p.inset.style.strokeWidth=Math.max(1,thickness*.24);p.inset.style.opacity=night?.2:.5;
+      p.refl.setAttribute('d',path(mir));p.refl.style.strokeWidth=thickness*.69;p.refl.style.opacity=night?.23:.32;
+      p.glow.setAttribute('d',path(cut));p.glow.style.strokeWidth=thickness*.83;p.glow.style.opacity=night?(active?.95:.42):0;
+      p.reflectedGlow.setAttribute('d',path(mirrorCut));p.reflectedGlow.style.strokeWidth=thickness*.73;p.reflectedGlow.style.opacity=night?(active?.5:.24):0;
+      pick('[data-ribs]').append(p.main,p.inset,p.glow);
+    }
+    angle.textContent=a+'°';
+    yaw.setAttribute('aria-valuetext',a+' degrees from front');
+    viewButtons.forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.view)===a)));
+    lightButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.light===mode)));
+    cues.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.cue===cue)));
+    const shape=a<20?'Ribs overlap':a<64?'Layers separate':'Nearly edge-on';
+    const experience=mode==='day'?'Day':cue==='event'?'Night · Event release':cue==='participant'?'Night · One contribution':'Night · Idle glow';
+    const summary=experience+' · '+shape+'. Simulated only; no site or device connected.';
+    if(status.textContent!==summary)status.textContent=summary;
+    root.dataset.lightMode=mode;
+  }
+  function changeLight(next){mode=next;cue='idle';clearTimeout(timer);draw();}
+  yaw.addEventListener('input',draw);
+  viewButtons.forEach(b=>b.addEventListener('click',()=>{yaw.value=b.dataset.view;draw();}));
+  lightButtons.forEach(b=>b.addEventListener('click',()=>changeLight(b.dataset.light)));
+  cues.forEach(b=>b.addEventListener('click',()=>{
+    clearTimeout(timer);mode='night';cue=b.dataset.cue;draw();
+    timer=setTimeout(()=>{cue='idle';draw();},3000);
+  }));
+  new ResizeObserver(draw).observe(svg);
+  draw();
+})();
+</script>
+</div><p class="note">Illustrative only. No site or weather connection, device access, telemetry, or control of physical equipment.</p><noscript>This study needs JavaScript. See the diagram links on the WATERLINE studies page.</noscript></main></body></html>

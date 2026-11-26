@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+<linearGradient id="lake" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#e9f3f7"/><stop offset="1" stop-color="#f8fafb"/></linearGradient>
+<marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto-start-reverse"><path d="M0 0 L7 3.5 L0 7 z" fill="#466274"/></marker>
+<marker id="orangeArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#b34f26"/></marker>
+<marker id="blueArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#2b7794"/></marker>
+<style>
+text{font-family:'DejaVu Sans',sans-serif;fill:#182a36}.eyebrow{font-size:16px;font-weight:700;letter-spacing:3px;fill:#2b7794}.title{font-size:54px;font-weight:700;letter-spacing:-1.7px}.sub{font-size:21px;fill:#456172}.h{font-size:23px;font-weight:700}.b{font-size:17px;font-weight:700}.s{font-size:15px;fill:#456172}.tiny{font-size:14px;fill:#456172}.nav{fill:#9e4826}.blue{fill:#236a85}.dim{stroke:#466274;stroke-width:1.6;fill:none}.leader{stroke:#567581;stroke-width:1.5;fill:none}.dash{stroke-dasharray:7 7}.strong{stroke:#254a60;stroke-width:6;fill:none;stroke-linecap:round}.thin{stroke:#4e8799;stroke-width:3.5;fill:none;stroke-linecap:round}.panel{fill:#fff;stroke:#d5e1e6;stroke-width:1.5}
+</style>
+</defs>
+<rect width="1600" height="1000" fill="#f3f7f8"/>
+<text x="62" y="58" class="eyebrow">WATERLINE  /  CONCEPT STUDY 01</text>
+<text x="62" y="120" class="title">Optics &amp; floating concept</text>
+<text x="64" y="159" class="sub">A physical arc above water; a second, virtual arc made by reflection.</text>
+
+<rect x="62" y="194" width="930" height="680" rx="12" class="panel"/>
+<text x="90" y="238" class="h">01  Front elevation</text>
+<text x="90" y="263" class="s">Near-normal boardwalk view · illustrative 6 m span × 2 m rise</text>
+<path d="M82 497 H972 V790 H82Z" fill="url(#lake)"/>
+<path d="M82 497 H972" stroke="#4f8498" stroke-width="2"/>
+<text x="875" y="486" class="tiny">Lake surface</text>
+
+<!-- dimension guards -->
+<path d="M262 464 V304 M730 464 V304" class="dim"/><path d="M268 312 H724" class="dim" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<rect x="465" y="297" width="64" height="26" fill="#fff"/>
+<text x="497" y="316" class="b" text-anchor="middle">6 m</text>
+<path d="M252 336 H205 M252 492 H205" class="dim"/><path d="M215 341 V487" class="dim" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<rect x="191" y="400" width="48" height="28" fill="#fff"/>
+<text x="215" y="420" class="b" text-anchor="middle">2 m</text>
+
+<!-- complete reflection geometry, virtual only -->
+<path d="M262 497 A234 156 0 0 0 730 497" stroke="#3788a4" stroke-width="4.5" opacity=".68" stroke-dasharray="17 11 6 10" fill="none" stroke-linecap="round"/>
+<path d="M280 497 Q494 786 711 497" stroke="#5e9eb4" stroke-width="2.5" opacity=".56" stroke-dasharray="13 11" fill="none"/>
+<path d="M300 497 Q494 760 691 497" stroke="#5e9eb4" stroke-width="2.5" opacity=".45" stroke-dasharray="10 12" fill="none"/>
+<path d="M284 578 L320 578 M310 600 L366 600 M498 654 L531 654 M612 613 L648 613 M680 570 L719 570" stroke="#7eadbf" stroke-width="2.1" fill="none"/>
+<!-- physical arc ribs -->
+<path d="M262 492 A234 156 0 0 1 730 492" class="strong"/>
+<path d="M280 492 Q494 203 711 492" class="thin"/>
+<path d="M300 492 Q494 229 691 492" class="thin"/>
+<path d="M315 422 C332 402 351 388 372 377 M603 369 C625 380 643 394 658 409" stroke="#bb613c" stroke-width="6" fill="none" stroke-linecap="round"/>
+<!-- support & markers -->
+<rect x="242" y="483" width="510" height="24" rx="9" fill="#314b5a"/>
+<rect x="268" y="497" width="87" height="18" rx="6" fill="#314b5a"/>
+<rect x="640" y="497" width="87" height="18" rx="6" fill="#314b5a"/>
+<circle cx="254" cy="481" r="7" fill="#fff" stroke="#b34f26" stroke-width="2.8"/>
+<circle cx="741" cy="481" r="7" fill="#fff" stroke="#b34f26" stroke-width="2.8"/>
+
+<path d="M648 366 L740 312 H784" class="leader"/>
+<text x="794" y="307" class="b">Physical ribs</text><text x="794" y="331" class="s">Shielded LED accents</text>
+<path d="M741 473 L789 412 H808" class="leader"/>
+<text x="818" y="407" class="b nav">Navigation light</text><text x="818" y="431" class="s">Independent supply</text>
+<path d="M737 507 L782 533 H822" class="leader"/>
+<text x="829" y="529" class="b">Floating base</text><text x="829" y="552" class="s">Indicative only</text>
+<path d="M697 594 L760 635 H789" class="leader"/>
+<text x="799" y="630" class="b blue">Virtual reflection</text><text x="799" y="654" class="s">No submerged arc</text>
+
+<!-- anchoring concept clearly independent of optical image -->
+<path d="M269 511 Q217 611 181 731 M728 511 Q780 617 831 731" stroke="#84929a" stroke-width="2" stroke-dasharray="5 7" fill="none"/>
+<path d="M164 733 H197 M813 733 H848" stroke="#84929a" stroke-width="4" stroke-linecap="round"/>
+<path d="M190 731 L222 751 H253" class="leader"/>
+<text x="263" y="754" class="s">Concept mooring indication only · approach and anchor points TBD by marine engineer</text>
+<path d="M91 793 H962" stroke="#d9e4e8"/>
+<text x="91" y="824" class="tiny">Stylized optical reflection. Depth, displacement and underwater assembly are not represented.</text>
+
+<!-- plan -->
+<rect x="1014" y="194" width="524" height="680" rx="12" class="panel"/>
+<text x="1042" y="238" class="h">02  Plan sightlines</text>
+<text x="1042" y="263" class="s">Concept only · not a georeferenced site plan</text>
+<rect x="1044" y="288" width="465" height="463" rx="8" fill="#e9f3f7"/>
+<path d="M1082 325 H1468 M1468 325 V597" stroke="#b6a691" stroke-width="24" stroke-linecap="round" opacity=".7" fill="none"/>
+<text x="1087" y="331" class="tiny">Main pedestrian deck</text>
+<text x="1461" y="583" transform="rotate(-90 1461 583)" class="tiny">Observation side</text>
+
+<rect x="1128" y="517" width="228" height="68" rx="14" fill="#253f4c" fill-opacity=".12" stroke="#657b88" stroke-dasharray="5 4" stroke-width="2"/>
+<path d="M1143 535 H1341 M1143 550 H1341 M1143 565 H1341" stroke="#254a60" stroke-width="6" stroke-linecap="round"/>
+<circle cx="1136" cy="551" r="6" fill="#fff" stroke="#b34f26" stroke-width="2.8"/>
+<circle cx="1348" cy="551" r="6" fill="#fff" stroke="#b34f26" stroke-width="2.8"/>
+
+<circle cx="1241" cy="329" r="9" fill="#2b7794" stroke="#fff" stroke-width="2"/>
+<path d="M1241 343 V509" stroke="#2b7794" stroke-width="3" fill="none" marker-end="url(#blueArrow)"/>
+<path d="M1201 342 L1171 506 M1281 342 L1311 506" stroke="#75aabd" stroke-width="1.8" stroke-dasharray="5 5"/>
+<rect x="1058" y="368" width="159" height="66" rx="7" fill="#fff"/>
+<text x="1070" y="392" class="b blue">Near-normal</text><text x="1070" y="414" class="s">Ribs visually align.</text>
+
+<circle cx="1468" cy="436" r="9" fill="#b34f26" stroke="#fff" stroke-width="2"/>
+<path d="M1456 441 L1357 523" stroke="#b34f26" stroke-width="3" fill="none" marker-end="url(#orangeArrow)"/>
+<rect x="1289" y="368" width="157" height="62" rx="7" fill="#fff"/>
+<text x="1301" y="392" class="b nav">Oblique</text><text x="1301" y="414" class="s">Layers separate.</text>
+<path d="M1348 559 L1402 619 H1458" class="leader"/>
+<text x="1275" y="643" class="tiny">Ribs separated in depth above base</text>
+
+<path d="M1044 775 H1508" stroke="#d9e4e8"/>
+<text x="1044" y="805" class="tiny">The ring is a visual alignment, not a fixed projection.</text>
+<text x="1044" y="832" class="tiny">Field-check angles, glare and wakes from actual viewpoints.</text>
+
+<text x="63" y="922" class="eyebrow">PROPOSAL DEVELOPMENT  /  NOT FOR CONSTRUCTION</text>
+<text x="63" y="952" class="s">Navigation, mooring, installation clearances, structural loads and final dimensions remain subject to site review and marine engineering.</text>
+</svg>

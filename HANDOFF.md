@@ -51,7 +51,7 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 | 5 | Previs: close-up renders | In progress | 2026-11-25 | `models/renders/` has day and three night views. Plain lighting, flat water. |
 | 6 | Previs: animation of the hour (thread, then travelling bands) | Done | 2026-11-26 | [Offline Three.js basin companion](simulators/basin.html) with a day cycle, orbit views, virtual reflections and simulated choices |
 | 7 | Previs: in-situ views | In progress | 2026-11-25 | Composites exist locally only (see Key facts). They look pasted in. |
-| 8 | Reviewer release | In progress | 2026-11-26 | GitHub Pages from the dedicated `gh-pages` branch, entry point `simulators/basin.html` |
+| 8 | Reviewer release | Done | 2026-11-26 | Live on GitHub Pages from `gh-pages` at `https://realsammyt.github.io/waterline/simulators/basin.html`. Source PR #3 awaits merge. |
 
 **Next action:** compare the companion's shore view with a small physical model. The final shore alignment remains open. The still renders in `models/render_closeup.py` still show full strips at night.
 
@@ -97,7 +97,7 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 
 ## 7. Activity log (newest first; append, don't overwrite)
 
-- **2026-11-26** Prepared the static companion and its local dependencies for a reviewer release on GitHub Pages.
+- **2026-11-26** Published the static reviewer site from source commit `26f331f`. Verified the public page and a Water choice in a fresh Chromium session.
 
 - **2026-11-26** Added the local 3D companion using the revision 4 arc equations. Checked offline rendering, hourly choices, midnight rollover, mobile layout and the WebGL fallback in Chromium.
 

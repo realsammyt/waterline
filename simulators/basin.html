@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file:; img-src 'self' file: data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Waterline | Basin companion</title><link rel="icon" href="data:,"><link rel="stylesheet" href="basin.css"></head>
+<body><header><a href="../index.html" class="brand"><span class="mark" aria-hidden="true">≋</span> WATERLINE</a><span>BASIN COMPANION</span></header>
+<main><div class="heading"><div><p class="eyebrow">Harbour Square Park Basin &nbsp; / &nbsp; Toronto</p><h1>Six Rings on Mother</h1></div><span class="edition">v0.5 &nbsp; / &nbsp; Spatial study</span></div>
+<div class="workspace"><section class="scene" aria-label="Installation view"><div class="stage" id="stage">
+<canvas id="view" tabindex="0" aria-label="Six honey-toned ribs on water. Drag or use arrow keys to orbit. Select a viewpoint to reset."></canvas>
+<div class="viewinfo"><span class="dot"></span><span id="readout">Dusk · Shore</span></div><span class="viewnumber" id="viewnumber">VIEW 01</span>
+<div id="fallback" hidden><p>The 3D view needs WebGL. The timeline and choices still work.</p><a href="weave.html">Open the illustrated simulator</a></div>
+<div class="caption"><span>Virtual reflections</span><span>Drag to orbit</span></div></div>
+<div class="views"><span class="eyebrow">Viewpoint</span><div id="views" class="segments"><button aria-pressed="true">Shore</button><button>Oblique</button><button>Above</button></div></div>
+<div class="timeline"><div class="line"><h2>Basin timeline</h2><output id="clock">19:24</output></div>
+<label for="time" class="sr">Simulated time of day</label><input id="time" type="range" min="0" max="1439" value="1164"><div class="ticks"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+<div class="transport"><button id="play">▶ &nbsp; Play cycle</button><label>Speed <select id="speed"><option value="2">30 s / hour</option><option value="12">5 s / hour</option><option value=".5">2 min / hour</option></select></label></div></div></section>
+<aside><section><p class="eyebrow">Scene settings</p><h2>Atmosphere</h2><div class="segments" id="times"><button>Day</button><button aria-pressed="true">Dusk</button><button>Night</button></div>
+<label class="water">Water surface <select id="surface"><option>Calm</option><option>Light chop</option><option>Passing wake</option></select></label></section>
+<section><p class="eyebrow">Participant simulation</p><h2>Choose a value</h2><p class="hint">Add one local choice per tap. The next hour carries the resulting chord.</p>
+<div id="choices"></div><div class="actions"><button id="next">Begin next hour <b aria-hidden="true">→</b></button><button id="clear">Clear choices</button></div></section>
+<section class="score"><p class="eyebrow">Current light score</p><p id="score" role="status"></p></section></aside></div>
+<footer><span>WATERLINE &nbsp; / &nbsp; Unbuilt concept</span><span>Local simulation · Navigation lighting is independent</span></footer></main>
+<script src="vendor/three-r160.min.js"></script><script src="basin-scene.js"></script><script src="basin.js"></script></body></html>

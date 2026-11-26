@@ -8,3 +8,5 @@
 6. Read the original SVGs and their paired PNGs. Follow all local doc, asset and demo links. Confirm imagery is synthetic or original, no personal or private references are bundled, and earlier studies are identified as such.
 
 Run the automated static checks: `python3 tests/check_public.py`. Browser testing is also needed for interactive changes.
+
+7. Open the 3D basin companion directly from disk with the browser offline. Compare Shore, Oblique and Above in Day, Dusk and Night. Check the open float centre, virtual reflections and independent far-side post. Compare Calm, Light chop and Passing wake. Queue Water 4, Time 2 and Air 1. Begin the next hour at dusk, then scrub to minute 30. Water and dimmer Time should hold, Air should be dark and the queue should be empty. Repeat with ties and an empty queue. Test pause, all speeds, midnight rollover, keyboard controls, a 360 px viewport, reduced motion and WebGL disabled. With WebGL unavailable, the illustrated simulator link and participant controls should remain usable.

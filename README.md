@@ -8,6 +8,8 @@ Six half rings, one woven eye. Six slender arches spring from one floating ring 
 
 ## Try it offline
 
+Open the [3D basin companion](simulators/basin.html) for the revision 4 installation on simulated water. Switch between shore, oblique and overhead views, scrub the 24-hour timeline or play a compressed cycle. The opening dusk scene shows an example Water and Air chord. Tap values to queue simulated participant choices, then begin the next hour to see the thread and its result. Scrubbing previews hours without spending queued choices. The shoreline and lighting are illustrative. The companion includes Three.js 0.160.1 and its [upstream licence](simulators/vendor/three-LICENSE.txt).
+
 Open [index.html](index.html) from the downloaded folder in a browser. No install or internet connection is required; the HTML pages work as local files with JavaScript enabled. The v0.5 study includes viewpoint, simulated water conditions, day/night, simulated choices among the six values with chords, and optional audio. The archived nine-dome and three-rib studies still run. The website preview on GitHub may display HTML as source; use the downloaded files.
 
 If your browser blocks local files, run `python3 -m http.server 8000 --bind 127.0.0.1` from this directory and open `http://127.0.0.1:8000/`. The server is optional and stays on your device.

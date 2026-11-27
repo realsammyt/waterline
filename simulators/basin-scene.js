@@ -60,7 +60,7 @@ function createBasin(canvas, values) {
       vec3 sheen=mix(vec3(.62,.72,.85),vec3(1.,.80,.63),dusk);
       vec3 col=base*lit*(.53+.45*sun+.26*dusk)+gloss*sheen*(stripe*.35+.14*pow(1.-abs(dot(normalize(n),V)),2.));
       float spill=bandLevel*(1.-smoothstep(.025,.11,abs(along-bandCentre)));
-      gl_FragColor=vec4(mix(col,bandTone,spill*.62),1.);}`
+      gl_FragColor=vec4(mix(col,bandTone,spill*.84),1.);}`
   });
   const grey=metal([.33,.39,.40],.38),socket=metal([.56,.45,.32],.55);
   const profile=[];

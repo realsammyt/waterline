@@ -13,6 +13,7 @@
   const zero=()=>Array(6).fill(0);
   let minute=1164, seconds=0, view=0, playing=false, last=performance.now(), dirty=true;
   let wakeStart=0, pending=zero();
+  let previewEnd=null;
   const samples=new Set([19,22]);
   const hours=new Map([[19,[0,0,4,0,2,0]],[22,[0,0,0,3,0,4]]]);
   function select(group,index){
@@ -20,7 +21,8 @@
   }
   function group(id,fn){Array.from($(id).children).forEach((b,i)=>b.onclick=()=>fn(i));}
   function stop(){playing=false;$('play').textContent='▶  Play cycle';}
-  function seek(m){minute=m;dirty=true;update();}
+  function seek(m){previewEnd=null;minute=m;dirty=true;update();}
+  function play(){playing=true;last=performance.now();$('play').textContent='Ⅱ  Pause cycle';}
   group('times',i=>{stop();seek([720,1164,1350][i]);});
   let orbitX=0,orbitY=0,drag=null;
   function orbit(dx,dy){
@@ -46,7 +48,7 @@
   $('time').oninput=e=>{stop();seek(Number(e.target.value));};
   $('play').onclick=()=>{
     if(playing)stop();
-    else {playing=true;last=performance.now();$('play').textContent='Ⅱ  Pause cycle';}
+    else play();
   };
   $('surface').onchange=()=>{wakeStart=seconds;dirty=true;};
   function refreshChoices(){
@@ -85,10 +87,19 @@
     const hour=(Math.floor(minute/60)+1)%24;
     pending[selected]++;
     startHour(hour);
-    // Hold halfway through the hour so the chosen bands are visible after the opening thread.
-    seek(hour*60+30);
+    seek(hour*60);
     const receipt='You chose '+values[selected].name+' for '+String(hour).padStart(2,'0')+':00. ';
-    $('visitor-receipt').textContent=receipt+'Preview paused at '+$('clock').value+'. '+lighting().message;
+    if(lighting().phase==='Day'){
+      $('visitor-receipt').textContent=receipt+'Decorative lights are off in daylight. Choose Dusk to try the night score.';
+    }else if(reduced.matches){
+      seek(hour*60+6);
+      $('visitor-receipt').textContent=receipt+'Opening order: '+order.map(i=>values[i].name).join(', ')+'. The band is paused at its starting foot. Press Play cycle to watch it travel.';
+      previewEnd=hour*60+59.99;
+    }else{
+      previewEnd=hour*60+59.99;
+      $('visitor-receipt').textContent=receipt+'Watch the thread cross the six ribs, then follow the held band from foot to foot.';
+      play();
+    }
     $('visitor-value').value='';
     $('visitor-value').onchange();
     canvas.focus({preventScroll:true});
@@ -147,7 +158,13 @@
       if(!reduced.matches)seconds+=dt;
       if(playing){
         const oldHour=Math.floor(minute/60),oldMinute=Math.floor(minute);
-        minute=(minute+dt*Number($('speed').value))%1440;
+        let speed=Number($('speed').value);
+        if(previewEnd!==null && minute%60<6)speed=Math.min(1,speed);
+        let next=minute+dt*speed;
+        if(previewEnd!==null && next>=previewEnd){
+          next=previewEnd;previewEnd=null;stop();dirty=true;
+        }
+        minute=next%1440;
         if(Math.floor(minute/60)!==oldHour)startHour(Math.floor(minute/60));
         if(oldMinute!==Math.floor(minute))update();
       }

@@ -4,8 +4,8 @@
 > what's next. Any agent starting fresh reads this first, then updates it before
 > ending. If anything here disagrees with reality, reality wins: fix the doc.
 
-**Last updated:** 2026-11-27 by Codex (embedded visitor preview)
-**Active branch:** `codex/embedded-visitor`, based on merged PR #6.
+**Last updated:** 2026-11-27 by Codex (visitor lighting sequence)
+**Active branch:** `codex/visitor-light-sequence`, based on merged PR #7.
 **Driving refs:** [AGENTS.md](AGENTS.md) (repo rules, binding), [docs/rings-on-mother.md](docs/rings-on-mother.md) (the design), [models/gen_rim.py](models/gen_rim.py) (geometry and first-pass checks)
 
 ---
@@ -51,10 +51,11 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 | 5 | Previs: close-up renders | In progress | 2026-11-25 | `models/renders/` has day and three night views. Plain lighting, flat water. |
 | 6 | Previs: animation of the hour (thread, then travelling bands) | Done | 2026-11-26 | [Offline Three.js basin companion](simulators/basin.html) with a day cycle, orbit views, virtual reflections and simulated choices |
 | 7 | Previs: in-situ views | In progress | 2026-11-25 | Composites exist locally only (see Key facts). They look pasted in. |
-| 8 | Reviewer release | Done | 2026-11-27 | Pages release `49801c6` verified at `https://realsammyt.github.io/waterline/simulators/basin.html`. |
+| 8 | Reviewer release | Done | 2026-11-27 | Pages release `5816cb8` verified at `https://realsammyt.github.io/waterline/simulators/basin.html`. |
 | 9 | Build and power notes | Done | 2026-11-27 | Live with collaborator guidance. Page prompt matches the README on main. |
 | 10 | Mooring and equipment drawings, visitor interface | Done | 2026-11-27 | Three diagrams and visitor preview live on Pages. |
-| 11 | Embedded visitor preview | Done | 2026-11-27 | Review branch connects the visitor choice to the 3D scene's local queue and clock. |
+| 11 | Embedded visitor preview | Done | 2026-11-27 | Live on Pages. Different choices changed the rendered lighting at the same simulated time without leaving the page. |
+| 12 | Visitor lighting playback | Done | 2026-11-27 | Review branch plays the opening thread and travelling band, then holds the final frame. |
 
 **Next action:** compare the companion's shore view with a small physical model. The final shore alignment remains open. The still renders in `models/render_closeup.py` still show full strips at night.
 
@@ -99,6 +100,10 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 ---
 
 ## 7. Activity log (newest first; append, don't overwrite)
+
+- **2026-11-27** Verified all six opening handoffs, band movement in the WebGL scene, pause and resume, and the reduced-motion result offline.
+
+- **2026-11-27** Merged PR #7 and published the same-page visitor flow. Verified Water, Air and Water again at 20:30 in the live 3D renderer.
 
 - **2026-11-27** Embedded visitor choices beside the basin and checked all six values, group choices, daylight and rollover offline. The old visitor URL opens the embedded controls.
 

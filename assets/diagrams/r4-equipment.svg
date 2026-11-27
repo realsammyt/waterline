@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="280" viewBox="0 0 360 280">
+<title>Far side of float with solar panels, equipment box and independent lantern</title>
+<style>text{font:13px sans-serif;fill:#ece8dd}.small{font-size:11px;fill:#c0cdca}.line{fill:none;stroke:#95b7b7;stroke-width:1.4}.rope{fill:none;stroke:#e7bc8a;stroke-width:2.7}.node{fill:#172326;stroke:#e7bc8a;stroke-width:2}</style>
+<rect width="360" height="280" fill="#172326"/>
+<path d="M45 128 A156 156 0 0 1 315 128" stroke="#637477" stroke-width="27" fill="none"/>
+<g transform="rotate(31 180 207)"><rect x="168" y="45" width="24" height="13" fill="#486c7b" stroke="#cadcdc"/><path d="M176 45v13m8 -13v13" stroke="#abc3ca"/></g>
+<g transform="rotate(21 180 207)"><rect x="168" y="45" width="24" height="13" fill="#486c7b" stroke="#cadcdc"/><path d="M176 45v13m8 -13v13" stroke="#abc3ca"/></g>
+<g transform="rotate(11 180 207)"><rect x="168" y="45" width="24" height="13" fill="#486c7b" stroke="#cadcdc"/><path d="M176 45v13m8 -13v13" stroke="#abc3ca"/></g>
+<g transform="rotate(-11 180 207)"><rect x="168" y="45" width="24" height="13" fill="#486c7b" stroke="#cadcdc"/><path d="M176 45v13m8 -13v13" stroke="#abc3ca"/></g>
+<g transform="rotate(-21 180 207)"><rect x="168" y="45" width="24" height="13" fill="#486c7b" stroke="#cadcdc"/><path d="M176 45v13m8 -13v13" stroke="#abc3ca"/></g>
+<g transform="rotate(-31 180 207)"><rect x="168" y="45" width="24" height="13" fill="#486c7b" stroke="#cadcdc"/><path d="M176 45v13m8 -13v13" stroke="#abc3ca"/></g>
+<rect x="174" y="48" width="12" height="9" fill="#f0c69a"/><circle cx="180" cy="37" r="4" fill="#dfe8e5"/>
+<path class="line" d="M181 37l22 -17h20"/><text x="227" y="24">Navigation post</text>
+<path class="line" d="M129 65l-18 59H24"/><text x="22" y="143">Solar panels</text>
+<path class="line" d="M180 57v66l18 16h119"/><text x="196" y="158">Equipment box</text>
+<text x="180" y="201" text-anchor="middle">Six panels on the outer, lake-facing arc</text>
+<text x="180" y="226" text-anchor="middle" class="small">Battery and light controller at the centre of this arc.</text>
+<text x="180" y="247" text-anchor="middle" class="small">The cellular modem’s position is still open.</text>
+</svg>

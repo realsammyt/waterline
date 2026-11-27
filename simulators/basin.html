@@ -27,6 +27,31 @@
 <section class="drawings"><h2>Installation schematics</h2><p>Revision 4 concept dimensions. The drawings show the physical ribs and float.</p><div class="plates"><figure><figcaption>Top</figcaption><img src="../assets/diagrams/rim-r4-top.svg" width="320" height="300" alt="Top projection of the six ribs on the low ring float"></figure>
 <figure><figcaption>Side</figcaption><img src="../assets/diagrams/rim-r4-side.svg" width="320" height="300" alt="Side projection of the six ribs on the low ring float"></figure>
 <figure><figcaption>Front</figcaption><img src="../assets/diagrams/rim-r4-front.svg" width="320" height="300" alt="Front projection of the six ribs on the low ring float"></figure></div><dl><div><dt>Floating ring</dt><dd>7.30 m across the outer edge. The float is 600 mm wide and 140 mm thick. A water-grey polyethylene skin covers closed-cell foam around an aluminium frame.</dd></div><div><dt>Six woven ribs</dt><dd>152 mm diameter satin, honey-toned anodised aluminium tube. Each rib spans about 6.5 to 6.7 m between its feet. The low ribs pass under the tall ones.</dd></div><div><dt>Light strips</dt><dd>Two strips follow each rib, one on top and one underneath facing the lake. A short band travels along each active rib.</dd></div></dl></section>
+<section class="drawings" aria-labelledby="systems-title">
+  <h2 id="systems-title">Moorings and onboard equipment</h2>
+  <p>The plan shows how three lines hold the weave facing shore. The section follows one line from the float to the lakebed. Both are concept drawings.</p>
+  <div class="plates">
+    <figure><figcaption>Mooring plan</figcaption><img src="../assets/diagrams/r4-mooring-plan.svg" width="360" height="280" alt="Three lines spread outward from the ring at 120 degree intervals, each ending at a separate lakebed anchor."></figure>
+    <figure><figcaption>Connection to the lakebed</figcaption><img src="../assets/diagrams/r4-mooring-section.svg" width="360" height="280" alt="One line descends from a connection on the float frame to an anchor on the basin floor."></figure>
+    <figure><figcaption>Lake-facing rim</figcaption><img src="../assets/diagrams/r4-equipment.svg" width="360" height="280" alt="Two groups of three flat solar panels flank the battery and light controller. A separate navigation post stands on the outer edge."></figure>
+  </div>
+  <dl>
+    <div><dt>From frame to anchor</dt><dd>The proposed load path runs from the aluminium frame through the mooring line to the lakebed anchor. Allowance for changing lake level lets the float rise and fall. The frame fitting, line length and anchor type depend on site measurements and marine engineering.</dd></div>
+    <div><dt>From sunlight to the ribs</dt><dd>Each panel occupies about 500 × 300 mm in the model. The six panels would charge the onboard battery. The controller would draw on that stored energy after dark to light the strips above and below each active rib.</dd></div>
+    <div><dt>From visitor choice to light</dt><dd>A proposed cellular modem on the float would request the combined choices once an hour. The controller would read that tally and play the light sequence. If the connection drops, it would play a stored score. The navigation lantern has separate power and controls.</dd></div>
+  </dl>
+  <h3>How the hourly tally reaches the ribs</h3>
+  <ol class="signal-path" aria-label="Proposed data path">
+    <li>Visitor chooses on the web page</li>
+    <li>Web page’s service counts the choices</li>
+    <li>Onboard cellular modem collects the tally</li>
+    <li>Light controller plays the hour on the ribs</li>
+  </ol>
+</section>
+<section class="drawings collaboration"><h2>The visitor’s view</h2>
+  <p>A printed sign on shore would invite one choice for the next hour. Try the three example screens: choose a value, see its confirmation, then read the next hour’s light score. All choices in this preview stay on this device.</p>
+  <p><a href="visitor.html">Try the visitor interface</a></p>
+</section>
 <section class="drawings build" aria-labelledby="build-title">
   <h2 id="build-title">How WATERLINE would be built</h2>
   <p class="build-intro">The first test would be a small model on water. From shore height, how much of the reflected arch can you see past the float? A two-rib lighting mockup would then show how little light it takes for the underside strip to register on the lake.</p>

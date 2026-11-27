@@ -4,8 +4,8 @@
 > what's next. Any agent starting fresh reads this first, then updates it before
 > ending. If anything here disagrees with reality, reality wins: fix the doc.
 
-**Last updated:** 2026-11-27 by Codex (thesis and schematic review)
-**Active branch:** `codex/thesis-schematics`. Includes the companion from PR #3.
+**Last updated:** 2026-11-27 by Codex (collaborator instructions)
+**Active branch:** `codex/build-notes`, based on the merged reviewer site.
 **Driving refs:** [AGENTS.md](AGENTS.md) (repo rules, binding), [docs/rings-on-mother.md](docs/rings-on-mother.md) (the design), [models/gen_rim.py](models/gen_rim.py) (geometry and first-pass checks)
 
 ---
@@ -51,7 +51,8 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 | 5 | Previs: close-up renders | In progress | 2026-11-25 | `models/renders/` has day and three night views. Plain lighting, flat water. |
 | 6 | Previs: animation of the hour (thread, then travelling bands) | Done | 2026-11-26 | [Offline Three.js basin companion](simulators/basin.html) with a day cycle, orbit views, virtual reflections and simulated choices |
 | 7 | Previs: in-situ views | In progress | 2026-11-25 | Composites exist locally only (see Key facts). They look pasted in. |
-| 8 | Reviewer release | In progress | 2026-11-27 | Previous companion live on Pages. Thesis and three schematic views checked offline. Republish from merged main, then verify the public URL. |
+| 8 | Reviewer release | Done | 2026-11-27 | Pages release `92979de` verified at `https://realsammyt.github.io/waterline/simulators/basin.html`. |
+| 9 | Build and power notes | Done | 2026-11-27 | Added to the companion on the review branch. Public site still serves release 92979de. |
 
 **Next action:** compare the companion's shore view with a small physical model. The final shore alignment remains open. The still renders in `models/render_closeup.py` still show full strips at night.
 
@@ -96,6 +97,12 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 ---
 
 ## 7. Activity log (newest first; append, don't overwrite)
+
+- **2026-11-27** Added a source-reading prompt and offline checkout instructions to the visualizer and README on the build-notes branch.
+
+- **2026-11-27** Added the prototype, fabrication, power, mooring and seasonal care sequence. Checked the power arithmetic and offline desktop and mobile layouts.
+
+- **2026-11-27** Merged PR #4 and republished Pages. A fresh browser confirmed the three approved paragraphs and loaded the top, side and front drawings.
 
 - **2026-11-27** Added the artist's thesis and model-derived top, side and front views. Tested the text, drawings, disclosure keyboard controls and WebGL fallback at 1280 and 360 px.
 

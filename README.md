@@ -14,6 +14,18 @@ Open [index.html](index.html) from the downloaded folder in a browser. No instal
 
 If your browser blocks local files, run `python3 -m http.server 8000 --bind 127.0.0.1` from this directory and open `http://127.0.0.1:8000/`. The server is optional and stays on your device.
 
+## Work with an AI collaborator
+
+Start with the [public WATERLINE repository on GitHub](https://github.com/realsammyt/waterline).
+
+Give your agent the repository and one question, such as “Which assumptions most affect the battery size?” If it can’t open GitHub, download the repository ZIP, extract it, and open that folder in your agent’s workspace. When reviewing a proposed change, include its pull request link so your agent reads the same revision.
+
+Copy this prompt and replace the question in brackets.
+
+> Read the public WATERLINE repository at https://github.com/realsammyt/waterline, or use the local checkout I provided. My question is [replace this with your question]. Start with HANDOFF.md for project status, then read AGENTS.md and README.md. Use docs/rings-on-mother.md for the current v0.5 design. For dimensions or power assumptions, check models/gen_rim.py. For what the visualizer actually does, check simulators/basin.html, basin.js and basin-scene.js in the simulators folder. Tell me which branch or commit you reviewed. Cite the file and section behind each finding, distinguish estimates from measurements, and flag anything the team still needs to decide. Suggest one practical next step I can bring back to the team.
+
+Share the answer with the team along with its source references and any proposed test. For edits, follow [the contribution guide](CONTRIBUTING.md).
+
 ## Read the studies
 
 - [v0.5 concept, theme response and night score](docs/rings-on-mother.md)

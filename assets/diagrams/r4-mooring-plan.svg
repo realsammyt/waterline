@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="280" viewBox="0 0 360 280">
+<title>Mooring plan with three lakebed anchor positions</title>
+<style>text{font:13px sans-serif;fill:#ece8dd}.small{font-size:11px;fill:#c0cdca}.line{fill:none;stroke:#95b7b7;stroke-width:1.4}.rope{fill:none;stroke:#e7bc8a;stroke-width:2.7}.node{fill:#172326;stroke:#e7bc8a;stroke-width:2}</style>
+<rect width="360" height="280" fill="#172326"/>
+<circle cx="180" cy="135" r="38" fill="none" stroke="#788a8c" stroke-width="8"/>
+<g class="rope"><path d="M180 97V39 M147 154L68 200 M213 154L292 200"/></g>
+<g class="node"><circle cx="180" cy="39" r="6"/><circle cx="68" cy="200" r="6"/><circle cx="292" cy="200" r="6"/></g>
+<g fill="#e7bc8a"><circle cx="180" cy="97" r="4"/><circle cx="147" cy="154" r="4"/><circle cx="213" cy="154" r="4"/></g>
+<text x="195" y="43">Lakebed anchor</text><text x="180" y="139" text-anchor="middle">Float</text>
+<path class="line" d="M242 171l16 -28h74"/><text x="253" y="137">Mooring line</text>
+<text x="180" y="248" text-anchor="middle">Three attachment points, 120° apart</text>
+<text x="180" y="267" class="small" text-anchor="middle">Plan diagram. Distances shortened.</text>
+</svg>

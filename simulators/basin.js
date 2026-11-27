@@ -61,12 +61,39 @@
     button.append(document.createElement('i'),label,document.createElement('span'));
     button.onclick=()=>{pending[i]++;refreshChoices();};
     $('choices').append(button);
+    $('visitor-value').add(new Option(name,String(i)));
   });
   refreshChoices();
   $('clear').onclick=()=>{pending=zero();refreshChoices();};
   function startHour(hour){
     hours.set(hour,pending);pending=zero();samples.delete(hour);refreshChoices();
   }
+  const meanings=[
+    'Welcome someone who arrived today.', 'Remember where you came from.',
+    'Care for the lake and what we share.', 'Slow down or remember someone.',
+    'Make room to breathe or speak.', 'Celebrate something from today.'
+  ];
+  $('visitor-value').onchange=()=>{
+    const selected=$('visitor-value').value;
+    $('visitor-show').disabled=selected==='';
+    $('visitor-meaning').textContent=meanings[selected] || 'Try this at dusk or night to see the coloured band.';
+  };
+  $('visitor-show').onclick=()=>{
+    const selected=$('visitor-value').value;
+    if(selected==='')return;
+    stop();
+    const hour=(Math.floor(minute/60)+1)%24;
+    pending[selected]++;
+    startHour(hour);
+    // Hold halfway through the hour so the chosen bands are visible after the opening thread.
+    seek(hour*60+30);
+    const receipt='You chose '+values[selected].name+' for '+String(hour).padStart(2,'0')+':00. ';
+    $('visitor-receipt').textContent=receipt+'Preview paused at '+$('clock').value+'. '+lighting().message;
+    $('visitor-value').value='';
+    $('visitor-value').onchange();
+    canvas.focus({preventScroll:true});
+    $('stage').scrollIntoView({block:'center'});
+  };
   $('next').onclick=()=>{
     const hour=(Math.floor(minute/60)+1)%24;startHour(hour);seek(hour*60);
     if(!reduced.matches&&!playing)$('play').click();
@@ -101,6 +128,7 @@
     $('readout').textContent=phase+' · '+(custom?'Orbit':['Shore','Oblique','Above'][view]);
     $('viewnumber').textContent='VIEW 0'+(view+1);
     if($('score').textContent!==message)$('score').textContent=message;
+    $('view-score').textContent=message;
     select('times',['Day','Dusk','Night'].indexOf(phase));
   }
   let draw=null, contextLost=false;

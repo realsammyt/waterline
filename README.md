@@ -1,6 +1,6 @@
 # WATERLINE
 
-Six half rings, one woven eye. Six slender arches spring from one floating ring and cross over the round of lake it holds, and the lake supplies their lower halves. From the shore the six rings and their reflections weave into a single eye that you look through; from above they cross like the strands of a basket. A wake breaks the eye and makes room for it to return. After dark, one low light passes from rib to rib and goes out.
+Six threads woven over open water. Each ring keeps its own line, none touches another, and together they read as one form. The lake completes them, and on calm water the weave opens into a portal on what we share.
 
 **Current study: v0.5, Six Rings on Mother.** WATERLINE is an unbuilt concept for Toronto’s Harbour Square Park Basin, not a commissioned installation, a site survey, or an engineered design. Each arch is the outline of a bubble in the foam on a kitchen jar, more than a thousand times life size. The mother is the disc that grows on top of a jar of fermenting tea and is passed from kitchen to kitchen; here it is a floating ring and the lake inside it, and the basin is the jar. The one-rib, three-rib, first six-rib and nine-dome studies are archived, and their power, cost and structural assumptions do not establish feasibility for this form.
 

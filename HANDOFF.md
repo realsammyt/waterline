@@ -4,8 +4,8 @@
 > what's next. Any agent starting fresh reads this first, then updates it before
 > ending. If anything here disagrees with reality, reality wins: fix the doc.
 
-**Last updated:** 2026-11-26 by Codex (GitHub Pages reviewer release)
-**Active branch:** `codex/basin-companion`. Revision 4 was merged in PR #2. The companion source goes through a PR to main.
+**Last updated:** 2026-11-27 by Codex (thesis and schematic review)
+**Active branch:** `codex/thesis-schematics`. Includes the companion from PR #3.
 **Driving refs:** [AGENTS.md](AGENTS.md) (repo rules, binding), [docs/rings-on-mother.md](docs/rings-on-mother.md) (the design), [models/gen_rim.py](models/gen_rim.py) (geometry and first-pass checks)
 
 ---
@@ -51,7 +51,7 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 | 5 | Previs: close-up renders | In progress | 2026-11-25 | `models/renders/` has day and three night views. Plain lighting, flat water. |
 | 6 | Previs: animation of the hour (thread, then travelling bands) | Done | 2026-11-26 | [Offline Three.js basin companion](simulators/basin.html) with a day cycle, orbit views, virtual reflections and simulated choices |
 | 7 | Previs: in-situ views | In progress | 2026-11-25 | Composites exist locally only (see Key facts). They look pasted in. |
-| 8 | Reviewer release | Done | 2026-11-26 | Live on GitHub Pages from `gh-pages` at `https://realsammyt.github.io/waterline/simulators/basin.html`. Source PR #3 awaits merge. |
+| 8 | Reviewer release | In progress | 2026-11-27 | Previous companion live on Pages. Thesis and three schematic views checked offline. Republish from merged main, then verify the public URL. |
 
 **Next action:** compare the companion's shore view with a small physical model. The final shore alignment remains open. The still renders in `models/render_closeup.py` still show full strips at night.
 
@@ -96,6 +96,8 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 ---
 
 ## 7. Activity log (newest first; append, don't overwrite)
+
+- **2026-11-27** Added the artist's thesis and model-derived top, side and front views. Tested the text, drawings, disclosure keyboard controls and WebGL fallback at 1280 and 360 px.
 
 - **2026-11-26** Published the static reviewer site from source commit `26f331f`. Verified the public page and a Water choice in a fresh Chromium session.
 

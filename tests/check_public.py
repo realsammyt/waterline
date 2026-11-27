@@ -22,7 +22,7 @@ for item in root.rglob("*"):
     else:
         targets = re.findall(r'(?:href|src)="([^"]+)"', source)
     for target in targets:
-        if target.startswith(("#", "data:", *allowed_host)):
+        if target == "https://github.com/realsammyt/waterline" or target.startswith(("#", "data:", *allowed_host)):
             continue
         target_path = (item.parent / unquote(target.split("#", 1)[0])).resolve()
         assert target_path.is_relative_to(root) and target_path.is_file(), (item.name, target)

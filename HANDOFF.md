@@ -4,7 +4,7 @@
 > what's next. Any agent starting fresh reads this first, then updates it before
 > ending. If anything here disagrees with reality, reality wins: fix the doc.
 
-**Last updated:** 2026-11-27 by Codex (build and power notes)
+**Last updated:** 2026-11-27 by Codex (collaborator instructions)
 **Active branch:** `codex/build-notes`, based on the merged reviewer site.
 **Driving refs:** [AGENTS.md](AGENTS.md) (repo rules, binding), [docs/rings-on-mother.md](docs/rings-on-mother.md) (the design), [models/gen_rim.py](models/gen_rim.py) (geometry and first-pass checks)
 
@@ -97,6 +97,8 @@ Statuses: `Not started` · `In progress` · `Blocked` · `Done`.
 ---
 
 ## 7. Activity log (newest first; append, don't overwrite)
+
+- **2026-11-27** Added a source-reading prompt and offline checkout instructions to the visualizer and README on the build-notes branch.
 
 - **2026-11-27** Added the prototype, fabrication, power, mooring and seasonal care sequence. Checked the power arithmetic and offline desktop and mobile layouts.
 

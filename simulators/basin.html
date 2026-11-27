@@ -43,5 +43,13 @@
     <div><h3>Inspect and recover</h3><p>The proposed crew would visit by boat every two weeks and after storms to check the rib feet, fasteners, lines and lights, and lift out litter caught inside the ring. In early October the crew would tow the work back to shore and unbolt it for transport. The mechanical joints allow the arches to be used again on land.</p></div>
   </div>
 </section>
+<section class="drawings collaboration" aria-labelledby="collaborate-title">
+  <h2 id="collaborate-title">Work with an AI collaborator</h2>
+  <p>Start with the <a href="https://github.com/realsammyt/waterline">public WATERLINE repository on GitHub</a>.</p>
+  <p>Give your agent the repository and one question, such as “Which assumptions most affect the battery size?” If it can’t open GitHub, download the repository ZIP, extract it, and open that folder in your agent’s workspace. When reviewing a proposed change, include its pull request link so your agent reads the same revision.</p>
+  <label for="agent-prompt">Copy this prompt and replace the question in brackets.</label>
+  <textarea id="agent-prompt" readonly rows="8">Read the public WATERLINE repository at https://github.com/realsammyt/waterline, or use the local checkout I provided. My question is [replace this with your question]. Start with HANDOFF.md for project status, then read AGENTS.md and README.md. Use docs/rings-on-mother.md for the current v0.5 design. For dimensions or power assumptions, check models/gen_rim.py. For what the visualizer actually does, check simulators/basin.html, basin.js and basin-scene.js in the simulators folder. Tell me which branch or commit you reviewed. Cite the file and section behind each finding, distinguish estimates from measurements, and flag anything the team still needs to decide. Suggest one practical next step I can bring back to the team.</textarea>
+  <p>Share the answer with the team along with its source references and any proposed test. For edits, follow the repository’s contribution guide.</p>
+</section>
 <footer><span>WATERLINE &nbsp; / &nbsp; Unbuilt concept</span><span>Local simulation · Navigation lighting is independent</span></footer></main>
 <script src="vendor/three-r160.min.js"></script><script src="basin-scene.js"></script><script src="basin.js"></script></body></html>

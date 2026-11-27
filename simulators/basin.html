@@ -9,14 +9,21 @@
 <canvas id="view" tabindex="0" aria-label="Six honey-toned ribs on water. Drag or use arrow keys to orbit. Select a viewpoint to reset."></canvas>
 <div class="viewinfo"><span class="dot"></span><span id="readout">Dusk · Shore</span></div><span class="viewnumber" id="viewnumber">VIEW 01</span>
 <div id="fallback" hidden><p>The 3D view needs WebGL. The timeline and choices still work.</p><a href="weave.html">Open the illustrated simulator</a></div>
-<div class="caption"><span>Virtual reflections</span><span>Drag to orbit</span></div></div>
+<div class="caption"><span>Virtual reflections</span><span id="view-score"></span><span>Drag to orbit</span></div></div>
 <div class="views"><span class="eyebrow">Viewpoint</span><div id="views" class="segments"><button aria-pressed="true">Shore</button><button>Oblique</button><button>Above</button></div></div>
 <div class="timeline"><div class="line"><h2>Basin timeline</h2><output id="clock">19:24</output></div>
 <label for="time" class="sr">Simulated time of day</label><input id="time" type="range" min="0" max="1439" value="1164"><div class="ticks"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
 <div class="transport"><button id="play">▶ &nbsp; Play cycle</button><label>Speed <select id="speed"><option value="2">30 s / hour</option><option value="12">5 s / hour</option><option value=".5">2 min / hour</option></select></label></div></div></section>
 <aside><section><p class="eyebrow">Scene settings</p><h2>Atmosphere</h2><div class="segments" id="times"><button>Day</button><button aria-pressed="true">Dusk</button><button>Night</button></div>
 <label class="water">Water surface <select id="surface"><option>Calm</option><option>Light chop</option><option>Passing wake</option></select></label></section>
-<section><p class="eyebrow">Participant simulation</p><h2>Choose a value</h2><p class="hint">Add one local choice per tap. The next hour carries the resulting chord.</p>
+<section id="visitor-preview"><p class="eyebrow">Visitor preview · Local simulation</p><h2>One choice for the water</h2>
+<label for="visitor-value">What should the next hour hold?</label>
+<select id="visitor-value"><option value="">Choose a value</option></select>
+<p class="hint" id="visitor-meaning">Try this at dusk or night to see the coloured band.</p>
+<button id="visitor-show" disabled>Show the next hour</button>
+<p class="hint">The clock pauses halfway through the next hour so you can see the result. Press Play cycle to watch the bands travel.</p>
+<p class="hint" role="status" id="visitor-receipt"></p></section>
+<section><p class="eyebrow">Group simulation</p><h2>Add other visitors</h2><p class="hint">Each tap queues another local choice. Your visitor preview includes these choices in its result.</p>
 <div id="choices"></div><div class="actions"><button id="next">Begin next hour <b aria-hidden="true">→</b></button><button id="clear">Clear choices</button></div></section>
 <section class="score"><p class="eyebrow">Current light score</p><p id="score" role="status"></p></section></aside></div>
 <details class="about" open><summary><h2>About the work</h2></summary>
@@ -47,10 +54,6 @@
     <li>Onboard cellular modem collects the tally</li>
     <li>Light controller plays the hour on the ribs</li>
   </ol>
-</section>
-<section class="drawings collaboration"><h2>The visitor’s view</h2>
-  <p>A printed sign on shore would invite one choice for the next hour. Try the three example screens: choose a value, see its confirmation, then read the next hour’s light score. All choices in this preview stay on this device.</p>
-  <p><a href="visitor.html">Try the visitor interface</a></p>
 </section>
 <section class="drawings build" aria-labelledby="build-title">
   <h2 id="build-title">How WATERLINE would be built</h2>

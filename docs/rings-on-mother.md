@@ -2,6 +2,12 @@
 
 **Six half rings, one woven eye.** Six slender arches spring from one floating ring and cross over the round of lake it holds. The lake supplies their lower halves. From the shore the six rings and their six reflections weave into a single eye that you look through. From above they cross like the strands of a basket. A wake takes the lower half away and lets it come back. Nothing moves mechanically, and nothing below the waterline is built.
 
+## Thesis
+
+WATERLINE is six threads woven over open water. Each ring keeps its own height and its own lean, and none touches another, yet together they read as one form. That is the work's picture of Toronto: many peoples, cultures and landscapes making a whole that none could make alone. No ring stands for any one group. Any thread could be anyone's.
+
+The lake completes each ring with its reflection, and on calm water the weave opens into a portal: a place to look through, not to pass through, toward a future we share.
+
 A bubble sitting in the foam on a kitchen jar is half in the liquid. Seen from the side it is a half ring, finished by its reflection. Each arch is that outline, more than a thousand times life size. The mother is the disc that grows on top of a jar of fermenting tea and is passed from kitchen to kitchen. Here it is a floating ring and the round of lake inside it. The jar is the basin itself, walled on three sides and open to the harbour on the fourth, 112 m by 51 m in the call's description.
 
 [Diagram source](../assets/diagrams/rings-on-mother-v05.svg) · [PNG](../assets/diagrams/rings-on-mother-v05.png) · [Offline simulator](../simulators/weave.html)
@@ -108,5 +114,7 @@ The simulator's choices and water presets are simulated. It has no network conne
 ## Draft opening for the artist statement
 
 > Look closely at the foam on any jar where something is fermenting. Each bubble sits half in the liquid, and from the side it is a half ring, finished by its own reflection. Under the foam floats the mother, the disc that grows on a jar of fermenting tea and is passed from kitchen to kitchen. WATERLINE sets both on Harbour Square Park Basin: six slender half rings, the widest more than a thousand times the size of a bubble, springing from one low floating ring and crossing over the water it holds. Only the upper halves are physical. The lake supplies the rest and takes it away again whenever a wake comes through. From the shore the six rings and their reflections weave into a single eye, and through it you see open water. From the towers above they cross like the strands of a basket. After dark each ring carries one value and one tone, and people on the shore, or anywhere they call Toronto home, choose which one sends a low band of colour slowly along its ring through the next hour. The basin is the jar. The water in it belongs to the Great Lakes, a fifth of the surface fresh water on Earth, and like a mother it can be kept and handed on but not rebuilt from parts.
+
+> The six rings are six threads. Each has its own height and its own lean, and no two touch. Yet from the shore they cross and read as one woven form. This is how the work sees Toronto: many peoples, cultures and landscapes, each keeping its own line, together making a whole that none could make alone. No ring stands for any one group. Any thread could be anyone's.
 
 The call caps the statement at two pages and also asks it for dimensions, anticipated weight, materials, maintenance and installation method. The build basis above gives first values for each; none is engineered or quoted.
